@@ -14,3 +14,5 @@ build/
 bert_train_tmp/
 models/
 results/
+poc_outputs/
+poc_outputs/**
