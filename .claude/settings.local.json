@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(.\\\\myenv\\\\Scripts\\\\python.exe -m py_compile src\\\\email_poc\\\\cli.py src\\\\email_poc\\\\report_utils.py src\\\\email_poc\\\\config.py; echo \"OK $LASTEXITCODE\")"
+    ]
+  }
+}

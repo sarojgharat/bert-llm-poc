@@ -1,0 +1,18 @@
+# Secrets / local config
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Generated outputs
+poc_output/
+poc_outputs/
+bert_train_tmp/
+models/
+results/
