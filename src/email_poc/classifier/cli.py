@@ -12,14 +12,15 @@ import os
 
 import pandas as pd
 
-from . import config
-from .dataset import load_dataset, profile_dataset, make_splits
+from .. import config
+from ..dataset import load_dataset, profile_dataset, make_splits
 from .bert_classifier import (
     get_or_train_bert_classifier,
     evaluate_bert_classifier,
     bert_escalation_curve,
 )
 from .llm_classifier import run_llm_classification, score_llm_results
+from ..report_utils import SECTION, fmt, fmt_rate, write_comparison_excel
 
 
 DESCRIPTION = """
@@ -47,24 +48,24 @@ SETUP
     .env.example), then authenticate with Application Default Credentials:
 
     gcloud auth login
-    gcloud config set project bert-vs-llm-poc
+    gcloud config set project <your-project-id>
     gcloud auth application-default login
-    gcloud auth application-default set-quota-project bert-vs-llm-poc
+    gcloud auth application-default set-quota-project <your-project-id>
 
 USAGE
     # Full run: fine-tune BERT + call LLM on the full eval set
-    run-poc --csv data/dataset.csv
+    run-classifier-poc --csv data/dataset.csv
 
     # Faster/cheaper iteration: smaller BERT model, smaller LLM sample
-    run-poc --csv data/dataset.csv \\
+    run-classifier-poc --csv data/dataset.csv \\
         --bert-model distilbert-base-uncased \\
         --bert-epochs 2 \\
         --gemini-model gemini-3.1-flash-lite \\
         --llm-eval-n 50
 
     # Skip one side if you're iterating on the other
-    run-poc --csv data/dataset.csv --skip-llm
-    run-poc --csv data/dataset.csv --skip-bert
+    run-classifier-poc --csv data/dataset.csv --skip-llm
+    run-classifier-poc --csv data/dataset.csv --skip-bert
 
 OUTPUTS (written to --out, default ./poc_outputs/)
     dataset_profile.json          - descriptive stats (volume, distributions, reply latency)
@@ -82,36 +83,13 @@ OUTPUTS (written to --out, default ./poc_outputs/)
 
 def _write_comparison_excel(results: dict, out_path: str) -> None:
     """Write a business-friendly Excel comparison of BERT vs LLM results."""
-    try:
-        from openpyxl import Workbook
-        from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
-        from openpyxl.utils import get_column_letter
-    except ImportError:
-        print("  [warn] openpyxl not installed; skipping Excel export. Run: pip install openpyxl")
-        return
-
     bert = results.get("bert", {})
     llm = results.get("llm", {})
     bert_i = bert.get("intent_identification", {})
     bert_c = bert.get("criticality_classification", {})
 
-    def _v(val, fmt=None):
-        """Format a metric value; None → 'N/A'."""
-        if val is None:
-            return "N/A"
-        if fmt == "pct":
-            return f"{val * 100:.1f}%"
-        if fmt == "ms":
-            return f"{val:.1f} ms"
-        if fmt == "usd":
-            return f"${val:.4f}"
-        return val
-
-    def _rate(count, total):
-        """Return 'XX.X%' or 'N/A' for count / total."""
-        if count is None or total is None or total == 0:
-            return "N/A"
-        return f"{count / total * 100:.1f}%"
+    _v = fmt
+    _rate = fmt_rate
 
     bert_n = bert_i.get("n")
     llm_n = llm.get("n_attempted")
@@ -124,7 +102,6 @@ def _write_comparison_excel(results: dict, out_path: str) -> None:
             f"{_v(llm.get('avg_output_tokens_per_email'))} out"
         )
 
-    SECTION = "__SECTION__"
     # Each row: (row_type, metric_name, business_description, bert_value, llm_value)
     rows = [
         # ── Intent Identification ──────────────────────────────────────────
@@ -237,89 +214,7 @@ def _write_comparison_excel(results: dict, out_path: str) -> None:
          _v(llm.get("n_valid_parses"))),
     ]
 
-    # ── Build workbook ──────────────────────────────────────────────────────
-    wb = Workbook()
-    ws = wb.active
-    ws.title = "BERT vs LLM Comparison"
-
-    # Styles
-    hdr_font = Font(bold=True, color="FFFFFF", size=11)
-    sec_font = Font(bold=True, color="FFFFFF", size=10)
-    body_font = Font(size=10)
-    col_hdr_font = Font(bold=True, size=10)
-
-    hdr_fill = PatternFill("solid", fgColor="1F4E79")    # dark navy
-    sec_fill = PatternFill("solid", fgColor="2E75B6")    # mid blue
-    bert_hdr_fill = PatternFill("solid", fgColor="D6E4F7")  # light blue
-    llm_hdr_fill = PatternFill("solid", fgColor="FFF2CC")   # light yellow
-    alt_fill = PatternFill("solid", fgColor="F5F5F5")    # very light gray
-    white_fill = PatternFill("solid", fgColor="FFFFFF")
-
-    thin = Side(style="thin", color="CCCCCC")
-    border = Border(left=thin, right=thin, top=thin, bottom=thin)
-    wrap = Alignment(wrap_text=True, vertical="top")
-    center = Alignment(horizontal="center", vertical="top", wrap_text=True)
-
-    # Column headers
-    ws.append(["Metric", "Business Description", "BERT", f"LLM ({llm.get('model', 'Gemini')})"])
-    for col in range(1, 5):
-        cell = ws.cell(row=1, column=col)
-        cell.font = hdr_font
-        cell.fill = hdr_fill
-        cell.alignment = center
-        cell.border = border
-
-    # Override BERT / LLM header fills for a colour hint
-    ws.cell(row=1, column=3).fill = PatternFill("solid", fgColor="155A8A")
-    ws.cell(row=1, column=4).fill = PatternFill("solid", fgColor="B8860B")
-
-    ws.freeze_panes = "A2"
-
-    data_row = 2
-    alt = False
-    for row in rows:
-        row_type, metric, desc, bert_val, llm_val = row
-        if row_type == SECTION:
-            ws.append([metric, "", "", ""])
-            sec_row = data_row
-            for col in range(1, 5):
-                cell = ws.cell(row=sec_row, column=col)
-                cell.font = sec_font
-                cell.fill = sec_fill
-                cell.alignment = Alignment(horizontal="left", vertical="center")
-                cell.border = border
-            ws.merge_cells(f"A{sec_row}:D{sec_row}")
-            data_row += 1
-            alt = False
-            continue
-
-        ws.append([metric, desc, bert_val, llm_val])
-        row_fill = alt_fill if alt else white_fill
-        for col in range(1, 5):
-            cell = ws.cell(row=data_row, column=col)
-            cell.font = body_font
-            cell.fill = row_fill
-            cell.alignment = wrap
-            cell.border = border
-        ws.cell(row=data_row, column=1).font = Font(bold=True, size=10)
-        # BERT / LLM value cells get a subtle column tint
-        ws.cell(row=data_row, column=3).fill = PatternFill("solid", fgColor="EBF3FB" if not alt else "D6E4F7")
-        ws.cell(row=data_row, column=4).fill = PatternFill("solid", fgColor="FFFDE7" if not alt else "FFF9C4")
-        data_row += 1
-        alt = not alt
-
-    # Column widths
-    ws.column_dimensions["A"].width = 36
-    ws.column_dimensions["B"].width = 60
-    ws.column_dimensions["C"].width = 32
-    ws.column_dimensions["D"].width = 32
-
-    # Row heights — taller for description rows
-    for i in range(2, data_row):
-        ws.row_dimensions[i].height = 40
-
-    wb.save(out_path)
-    print(f"  Excel report written to {out_path}")
+    write_comparison_excel(rows, out_path, "BERT vs LLM Comparison", "BERT", f"LLM ({llm.get('model', 'Gemini')})")
 
 
 # ---------------------------------------------------------------------------

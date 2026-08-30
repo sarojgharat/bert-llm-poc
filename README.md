@@ -1,8 +1,18 @@
 # Email Automation PoC — Fine-Tuned BERT vs. Gemini LLM
 
 Compares a fine-tuned BERT-family transformer against Google Gemini
-(zero-shot, via Vertex AI) on the same held-out support emails, for two
-tasks: **intent identification** and **criticality classification**.
+(zero-shot, via Vertex AI) on the same held-out support emails, across two
+independent comparisons:
+
+- **Classification** (`email_poc.cli` / `run-poc`) — intent identification
+  and criticality classification.
+- **Data extraction** (`email_poc.extraction.cli` / `run-extraction-poc`) —
+  extracting the set of products (possibly more than one) an email
+  discusses, a multi-label task scored differently from classification.
+
+The two comparisons are fully independent pipelines (own dataset prep,
+own model code, own CLI/outputs); they only share `config.py` (labels,
+pricing) and `report_utils.py` (the Excel report layout).
 
 ## Project layout
 
@@ -12,14 +22,21 @@ bert-llm-poc/
 │   └── dataset.csv            # labeled support-email dataset
 ├── src/
 │   └── email_poc/
-│       ├── config.py           # constants, .env loading, pricing table
-│       ├── dataset.py          # load / profile / split the dataset
-│       ├── bert_classifier.py  # fine-tune + evaluate BERT
-│       ├── gemini_classifier.py# zero-shot Gemini calls + scoring
-│       ├── model_downloader.py # standalone HF checkpoint download helper
-│       └── cli.py              # argparse entry point, orchestrates a full run
+│       ├── config.py             # constants, .env loading, pricing table, label taxonomies
+│       ├── dataset.py            # load / profile / split the dataset (classification)
+│       ├── bert_classifier.py    # fine-tune + evaluate BERT (classification)
+│       ├── llm_classifier.py     # zero-shot Gemini calls + scoring (classification)
+│       ├── report_utils.py       # shared Excel comparison-report builder
+│       ├── cli.py                # argparse entry point for the classification comparison
+│       ├── model_downloader.py   # standalone HF checkpoint download helper
+│       └── extraction/           # data-extraction comparison (independent pipeline)
+│           ├── dataset.py           # load / normalize product labels / split
+│           ├── bert_extractor.py    # multi-label BERT fine-tune + evaluate + shared scoring
+│           ├── llm_extractor.py     # zero-shot Gemini product extraction + scoring
+│           └── cli.py               # argparse entry point for the extraction comparison
 ├── scripts/
-│   ├── run_poc.py               # run without installing the package
+│   ├── run_poc.py               # run classification comparison without installing the package
+│   ├── run_extraction_poc.py    # run extraction comparison without installing the package
 │   └── download_bert_model.py   # download without installing the package
 ├── pyproject.toml
 ├── requirements.txt
@@ -29,7 +46,7 @@ bert-llm-poc/
 ## Setup
 
 Install as an editable package (recommended — this also registers the
-`run-poc` and `download-bert-model` commands):
+`run-poc`, `run-extraction-poc`, and `download-bert-model` commands):
 
 ```bash
 pip install -e .
@@ -74,12 +91,13 @@ a subset is used by the pipeline):
 | `message_body` | raw email text — the model input |
 | `email_types` | JSON-list string, e.g. `["issue"]`; first element becomes the `intent` label (`issue` / `inquiry` / `suggestion`) |
 | `email_criticality` | `high` / `medium` / `low` |
+| `product_types` | JSON-list string, e.g. `["IAM service", "Cloud management"]`; used by the data-extraction comparison (see below) — case is inconsistent in the raw data and gets normalized against `config.PRODUCT_LABELS` |
 | `thread_id`, `timestamp` | used to compute reply-latency stats in the dataset profile |
 
 Intent classes with fewer than `MIN_CLASS_SIZE` (3, in `config.py`) examples
 are dropped before splitting.
 
-## Running
+## Running — classification (intent + criticality)
 
 ```bash
 # Full run: fine-tune BERT + call Gemini zero-shot on the eval set
@@ -106,14 +124,55 @@ directory, default `poc_outputs/`).
 BERT fine-tuned weights are cached per task under `<out>/bert_cache/` and
 reloaded on subsequent runs unless `--force-retrain-bert` is passed.
 
-## Outputs (written to `--out`, default `poc_outputs/`)
+### Outputs (written to `--out`, default `poc_outputs/`)
 
 | file | contents |
 |---|---|
 | `dataset_profile.json` | descriptive stats: volume, distributions, reply latency |
 | `bert_eval_predictions.csv` | eval set + BERT predictions + confidence |
-| `gemini_eval_predictions.csv` | eval set (or sample) + Gemini predictions + token usage |
+| `llm_eval_predictions.csv` | eval set (or sample) + LLM predictions + token usage |
 | `poc_results.json` | every headline metric: F1/accuracy, latency, throughput, cost per 1,000 emails |
+| `bert_vs_llm_comparison.xlsx` | business-friendly Excel comparison of both models |
+
+## Running — data extraction (product identification)
+
+Same dataset, same BERT-vs-LLM comparison shape, but a different task and
+different metrics: given an email, extract the set of products (from
+`config.PRODUCT_LABELS`) it discusses. Since an email can reference more
+than one product, BERT is fine-tuned as a **multi-label** classifier
+(sigmoid per product, not a single softmax), and both sides are scored with
+multi-label metrics (exact-match ratio, micro/macro F1, per-product F1,
+Hamming loss) instead of single-label accuracy/F1.
+
+```bash
+# Full run
+run-extraction-poc --csv data/dataset.csv
+# or, without installing: python scripts/run_extraction_poc.py --csv data/dataset.csv
+
+# Faster/cheaper iteration
+run-extraction-poc --csv data/dataset.csv \
+    --bert-model distilbert-base-uncased \
+    --bert-epochs 2 \
+    --gemini-model gemini-3.1-flash-lite \
+    --llm-eval-n 50
+
+# Skip one side if you're iterating on the other
+run-extraction-poc --csv data/dataset.csv --skip-llm
+run-extraction-poc --csv data/dataset.csv --skip-bert
+```
+
+Same flags as `run-poc`, plus `--bert-threshold` (sigmoid cutoff above
+which a product is predicted present; default `0.5`). BERT weights are
+cached under `<out>/bert_extraction_cache/`.
+
+### Outputs (written to `--out`, default `poc_outputs/`)
+
+| file | contents |
+|---|---|
+| `bert_extraction_eval_predictions.csv` | eval set + BERT predicted product sets |
+| `llm_extraction_eval_predictions.csv` | eval set (or sample) + LLM predicted product sets + token usage |
+| `extraction_results.json` | every headline metric |
+| `bert_vs_llm_extraction_comparison.xlsx` | business-friendly Excel comparison of both models |
 
 ## model_downloader.py
 

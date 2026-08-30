@@ -16,5 +16,6 @@ dependencies = { file = ["requirements.txt"] }
 where = ["src"]
 
 [project.scripts]
-run-poc = "email_poc.cli:main"
-download-bert-model = "email_poc.model_downloader:main"
+run-classifier-poc = "email_poc.classifier.cli:main"
+run-extraction-poc = "email_poc.extraction.cli:main"
+download-bert-model = "email_poc.classifier.model_downloader:main"

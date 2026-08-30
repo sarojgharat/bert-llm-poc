@@ -27,6 +27,12 @@ MIN_CLASS_SIZE = 3                                    # drop intent classes smal
 INTENT_LABELS = ["issue", "inquiry", "suggestion"]
 CRITICALITY_LABELS = ["high", "medium", "low"]
 
+# Canonical product taxonomy for the data-extraction comparison (see
+# email_poc.extraction). The raw `product_types` column has inconsistent
+# casing (e.g. "IAM service" vs "IAM Service") which is normalized against
+# this list when the extraction dataset is loaded.
+PRODUCT_LABELS = ["API Development", "API Monitoring", "Cloud Management", "IAM Service", "Mercury Language"]
+
 # ---------------------------------------------------------------------------
 # Gemini / Vertex AI
 # ---------------------------------------------------------------------------

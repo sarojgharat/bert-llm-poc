@@ -1,0 +1,2052 @@
+,message_body,true_intent,pred_intent,intent_confidence,true_criticality,pred_criticality,criticality_confidence
+0,"Dear John,
+
+Thank you for contacting Aetheros Support.
+
+We understand you are facing difficulties with the Mercury compiler. Could you please provide us with the following information to help us investigate further?
+
+* Operating system and version
+* Complete error message and stack trace
+* A code snippet that reproduces the issue
+
+We will look into this issue and get back to you as soon as possible.
+
+Regards,
+Aetheros Support Team",issue,issue,0.8699609637260437,high,high,0.9087815284729004
+1,"Hi Aetheros Support,
+
+We've been using your API monitoring solution for a few months now and are very pleased with its features and performance. However, we've noticed that the default alert threshold for latency spikes is a bit too sensitive for our use case. We often receive alerts for minor spikes that don't necessarily indicate a real issue.
+
+It would be great if you could consider adding an option to customize the latency spike alert threshold. This would allow us to fine-tune the sensitivity and reduce the number of false positives we receive.
+
+Thank you for considering this suggestion.
+
+Sincerely,
+John Doe",suggestion,suggestion,0.9923104047775269,high,low,0.5690498948097229
+2,"Hi Isiah,
+
+Thank you for reaching out. We appreciate your interest in Mercury!
+
+We apologize for the inconvenience caused by the lack of detailed documentation on error handling. We're currently working on expanding our documentation, and your feedback is valuable in prioritizing improvements. 
+
+In the meantime, we've compiled some resources that might be helpful:
+
+* **Mercury Forum:** You can find discussions and examples related to error handling on our community forum: [link to forum]
+* **Example Project:**  We have an open-source example project on GitHub that demonstrates some basic error handling techniques: [link to repository]
+
+We'll keep you updated on the progress of the documentation. If you have any further questions, please don't hesitate to ask.
+
+Best regards,
+The Aetheros Support Team",suggestion,suggestion,0.8600077629089355,low,low,0.6704619526863098
+3,"Hi Support Team,
+
+Thanks for the quick response. You can find the code snippet below:
+
+```mercury
+async function myFunc() {
+  console.log('Starting...');
+  await sleep(1000); // Wait for 1 second
+  console.log('Finished!');
+}
+
+myFunc();
+console.log('This should appear before 'Finished!');
+```
+
+I'm currently using Mercury version 2.3.1.
+
+Thanks,
+John",inquiry,inquiry,0.6098345518112183,medium,medium,0.5575951337814331
+4,"Hi Aetheros Support,
+
+I'm working on a project where I need to define a large number of roles within the IAM service. Is there a limit on how many roles I can create?  Also, is there any documentation on best practices for managing a large number of roles?
+
+Thanks,
+John Doe",inquiry,inquiry,0.9811145663261414,low,low,0.8954604268074036
+5,"Hi Aetheros Support,
+
+We've been experiencing some issues lately when trying to assign specific roles to new users within our application. The roles seem to be defined correctly in the IAM service, but when we try to assign them during user creation, we receive an error. 
+
+Could you please provide some guidance on how to troubleshoot this?
+
+Thanks,
+John Doe",issue,issue,0.8149683475494385,low,medium,0.7004321813583374
+6,This is causing significant disruption to our business. Do you have any updates?,issue,issue,0.9226768612861633,high,high,0.9739845991134644
+7,"Dear John,
+
+Thank you for contacting Aetheros Support. We understand the urgency of the situation and are actively investigating the issue with your cloud servers and API outage. We will provide you with an update shortly.
+
+Sincerely,
+Aetheros Support Team",issue,issue,0.930880069732666,high,high,0.9698517918586731
+8,"Hi John,
+
+We've looked into this further, and it appears there might be a temporary issue on our end affecting API monitoring data. Our engineers are working on resolving this issue as a top priority.
+
+We apologize for the inconvenience and will keep you updated on the progress.
+
+Sincerely,
+Aetheros Support",issue,issue,0.9258213639259338,low,high,0.612701416015625
+9,"Hi Aetheros Support,
+
+I'm having trouble setting up role-based permissions in Mercury Language for our API development. 
+
+Specifically, I'm trying to grant a developer role read-only access to certain API endpoints, but I can't seem to make it work using the built-in Mercury functions. 
+
+Could you provide some guidance or documentation on how to achieve this?
+
+Thanks,
+John Doe",issue,inquiry,0.8232988715171814,low,low,0.8774826526641846
+10,"Aetheros Support,
+
+Here is the information you requested:
+
+* **IAM roles updated:** We updated the 'Data Analyst' role to restrict access to certain API endpoints.
+* **Error messages:** We are getting a '403 Forbidden' error with the message 'Invalid API credentials' on all API calls made by users with the 'Data Analyst' role.
+* **Time issue began:** Approximately 18:00 UTC yesterday.
+
+This is bringing our operations to a standstill. We need a resolution to this issue very quickly. 
+
+Thanks,
+John Doe ",issue,issue,0.9208850264549255,high,high,0.741165280342102
+11,"Dear John,
+
+Thank you for reaching out to us. We understand you are facing difficulties utilizing the advanced features of Mercury for your custom API development. To better assist you, could you please provide us with more details about the specific challenges you are encountering? Some helpful information includes:
+
+* Which specific advanced features are you struggling with?
+* Could you share the relevant code snippets where you are facing issues?
+* What is the expected outcome, and what are you experiencing instead?
+
+Once we have a clearer understanding of your specific issues, we can provide you with more tailored guidance and support.
+
+Best regards,
+The Aetheros Support Team",issue,inquiry,0.9113509058952332,medium,low,0.5880350470542908
+12,"Hi Aetheros Support,
+
+We've been experiencing significantly increased response times from the API you developed for us over the past few days.  Our internal monitoring shows spikes exceeding acceptable thresholds, impacting our application performance.
+
+We need this addressed urgently. Please let us know what information you need from us to investigate and resolve this issue as quickly as possible.
+
+Sincerely,
+John Doe",issue,issue,0.8549898266792297,medium,medium,0.548721432685852
+13,"Hi Support Team,
+
+I figured out the issue. It turns out there was a typo in my API endpoint URL when defining the permissions for the custom role. 
+
+Thanks for your time anyway.
+
+Regards,
+John",issue,issue,0.875141978263855,low,low,0.8435560464859009
+14,"Hi,
+
+As requested, please find attached the error message screenshot.
+
+Current instance type: c4.xlarge
+Region: us-east-1
+
+Thanks,
+John",inquiry,issue,0.9012705683708191,medium,medium,0.519473671913147
+15,"We are experiencing a critical issue where our API monitoring dashboard is showing our main API as down, however, we are not experiencing any actual downtime.  Our customers are NOT impacted, but this false positive is causing us significant concern and alarm. We need this addressed ASAP as we rely heavily on your monitoring platform for accurate status reporting.",issue,issue,0.9457212686538696,high,high,0.9754271507263184
+16,"Hi,
+
+Here's the information you requested:
+
+* Account ID: 87654321
+* Approximate time: Around 9:50 AM EST
+* No error message, just a blank dashboard
+
+This is really impacting our operations, please advise on a resolution ASAP.
+
+Thanks,
+John",issue,issue,0.8722748756408691,medium,medium,0.4885328412055969
+17,"Dear Aetheros Support Team,
+
+I'm writing to suggest a significant improvement to your IAM service. While the current feature set is robust, adding detailed activity logs and audit trails would greatly enhance security and compliance for our organization.
+
+Specifically, we'd benefit from tracking actions like:
+
+* User logins (successful and failed)
+* Role assignments and changes
+* Permission modifications
+* API key generation and usage
+
+Having a comprehensive log of these activities would allow us to:
+
+* Quickly identify and address potential security breaches
+* Meet regulatory compliance requirements for data access auditing
+* Gain deeper insights into user behavior and system usage patterns
+
+I believe this enhancement would be invaluable for many Aetheros customers and significantly strengthen your IAM offering. Please let me know if you have any questions or require further details.
+
+Sincerely,
+
+Isiah Schulist
+Head of Information Security",suggestion,suggestion,0.9928929209709167,high,medium,0.489749014377594
+18,"Hi Aetheros Support,
+
+We're having trouble deploying a Mercury application to a new cloud instance provisioned through your platform. We've followed the documentation closely, but keep running into an error message we don't understand. 
+
+The error message is: ""Resource allocation conflict: Unable to bind port 8080"".
+
+Could you please help us troubleshoot this issue?
+
+Thanks,
+John Doe",issue,issue,0.7443585395812988,medium,medium,0.866956353187561
+19,"Hi John,
+
+Thank you for reaching out to Aetheros Support. We understand you're experiencing issues with role assignments for your API. 
+
+To help us diagnose the problem, could you please provide us with the following information:
+
+* The specific role you are trying to assign.
+* The API endpoint the developers are trying to access.
+* A screenshot of the error message they are receiving.
+
+Once we have this information, we can investigate further and assist you in resolving the issue.
+
+Best regards,
+Aetheros Support Team",issue,issue,0.8685384392738342,medium,medium,0.7243933081626892
+20,"Dear John,
+
+Thank you for your valuable feedback! We appreciate you taking the time to share your suggestion for the Cloud Management dashboard.
+
+We understand how a real-time resource usage graph on the main dashboard would enhance your monitoring experience. We've added your request to our development roadmap, and our team will be exploring its feasibility in upcoming sprints.
+
+We'll keep you informed about any updates on this feature implementation.
+
+Best regards,
+Aetheros Support Team",suggestion,suggestion,0.9935494065284729,medium,low,0.7959488034248352
+21,"Hi Aetheros Support,
+
+We are experiencing difficulties deploying our new Mercury application to the cloud environment managed by Aetheros. 
+
+We are encountering error messages related to resource allocation and the deployment is consistently failing.  We have reviewed our code and the deployment configuration, but we haven't been able to pinpoint the exact cause of the issue.
+
+Could you please provide urgent assistance to resolve this deployment issue?
+
+Best regards,
+John Smith",issue,issue,0.8970890641212463,medium,medium,0.8298739194869995
+22,"Dear Isiah,
+
+Thank you for your email and for the suggestion regarding async/await support in Mercury. We appreciate you taking the time to share your thoughts on how we can improve our language.
+
+We understand the benefits that async/await syntax brings to asynchronous programming, and we acknowledge the growing popularity of this feature in modern languages.  We've taken note of your suggestion and will be discussing it with our development team in our upcoming roadmap planning sessions.
+
+While we can't promise if or when this feature will be implemented, we value your feedback and will keep it in mind as we continue to develop and evolve Mercury.
+
+Thanks again for your suggestion.
+
+Sincerely,
+The Aetheros Support Team",suggestion,suggestion,0.9934288859367371,medium,low,0.502398669719696
+23,"Hi,
+
+Please find the requested information below:
+
+* Mercury SDK version: 2.3.1
+* API logs: [Attached]
+* Code snippet: [Attached]
+* Recent changes: We upgraded our load balancer configuration two days ago.
+
+We hope this information is helpful.
+
+Thanks,
+John",issue,issue,0.8606715798377991,high,high,0.6989057064056396
+24,"Hi Support Team,
+
+Here's the information you requested:
+
+* **Endpoints:** /api/v1/users, /api/v1/products
+* **Timeframe:** October 25th, 2023, from 14:00 to 15:00 UTC
+* **Screenshots:** [Link to screenshots]
+
+Please let me know if you require any further details.
+
+Thanks,
+John",inquiry,issue,0.8019541501998901,low,low,0.49972888827323914
+25,"Hi John,
+
+Thank you for contacting Aetheros Support. We understand that you're experiencing slow API response times, and we'll do everything we can to assist you.
+
+To help us diagnose the issue, could you please provide the following information:
+
+* The approximate time you first noticed the issue
+* Any specific API endpoints that are affected
+* Whether the issue is intermittent or constant
+* Any error messages you're encountering
+
+We look forward to your reply and will work towards a resolution as quickly as possible.
+
+Best regards,
+Aetheros Support Team",inquiry,issue,0.9107978940010071,medium,medium,0.5873963236808777
+26,"Hi Aetheros Support,
+
+I'm working with the Mercury language for a new API endpoint, and I'm having trouble finding clear documentation on how to implement custom authorization logic.  Is there a specific section in the docs, or could you provide some guidance on how to achieve this?
+
+Thanks,
+John Doe",inquiry,inquiry,0.9803398251533508,low,low,0.8969308137893677
+27,"Our production environment is experiencing a major outage. We believe it's related to a misconfigured security group in Aetheros Cloud Management. We need immediate assistance to resolve this issue as it's impacting our customers.
+
+Additionally, we're having trouble adding a new engineer to the IAM service with the necessary permissions to address the issue. The interface seems unresponsive.",issue,issue,0.9324678182601929,high,high,0.9763365983963013
+28,Our team has identified the issue and is working on restoring your services. We apologize for the delay and will provide another update within 2 hours.,issue,issue,0.9478131532669067,high,high,0.9759957194328308
+29,"Dear John,
+
+Our engineers have identified the issue. There was a temporary system-wide glitch affecting the IAM signature verification process. This has been resolved now. Please confirm if the issue is resolved on your end as well. 
+
+We apologize for the inconvenience caused. 
+
+Sincerely,
+Aetheros Support Team",issue,issue,0.9269644021987915,high,high,0.9701946973800659
+30,"Dear John,
+
+Thank you for contacting Aetheros Support. We understand you're experiencing discrepancies with your API monitoring dashboard data.
+
+To help us investigate further, could you please provide the following information:
+
+* **Affected API endpoints:**
+* **Timeframe of the discrepancies:**
+* **Screenshots of the discrepancies from your dashboard and application logs:**
+
+Once we have this information, we'll be able to assist you more effectively.
+
+Best regards,
+Aetheros Support Team",inquiry,issue,0.9150696992874146,low,medium,0.7400014996528625
+31,"We are experiencing a critical issue with our IAM service from Aetheros. Users are being randomly logged out of applications, and some are completely unable to access the resources they need. This is causing massive disruption to our operations.
+
+We have checked our application logs and network configurations, and everything seems to be in order on our end. We suspect there might be an issue with the Aetheros IAM service itself.
+
+Please investigate this urgently and provide a solution as soon as possible. This is impacting our business-critical applications.",issue,issue,0.9379981160163879,high,high,0.9706248641014099
+32,"Hi Aetheros Support,
+
+I'm having some trouble understanding how to set up granular permissions for different teams within our organization using the IAM service. 
+
+Specifically, I want to give developers read-only access to certain cloud resources, while granting the operations team full control. Is this something possible with the IAM roles and policies?
+
+Thanks,
+John Doe",inquiry,inquiry,0.9818543195724487,low,low,0.8774582743644714
+33,"We are facing a critical issue with the API integration for our Project Phoenix. The API developed by Aetheros is not handling data correctly, leading to incorrect information being displayed on our application. This is a high-priority issue as it's impacting our live operations. We need immediate assistance to resolve this.
+
+Project Details:
+Project Name: Phoenix
+API in Question: Inventory Management API
+
+Please let us know what steps you need from our end to help troubleshoot and resolve this issue as quickly as possible.",issue,issue,0.9080546498298645,high,high,0.9708250761032104
+34,"Dear Isiah,
+
+Thank you for your email and your valuable suggestion regarding group-based permissions for our IAM service. We appreciate you taking the time to share your feedback with us.
+
+We understand the need for more efficient permission management, especially for large teams. We've added your suggestion to our product roadmap and will definitely consider it for future updates to our IAM service.
+
+While we can't provide a specific timeline for this feature implementation, we'll keep you updated on any developments.
+
+If you have any further suggestions or questions, please don't hesitate to contact us.
+
+Best regards,
+The Aetheros Support Team",suggestion,suggestion,0.9935247898101807,low,low,0.7657424211502075
+35,"Hi Aetheros Support,
+
+I'm working on a project using the Mercury language and I'm having trouble finding clear documentation on how to implement asynchronous API calls. Is there a specific section in the docs I should be looking at, or are there any examples I could reference?
+
+Thanks,
+John Doe",inquiry,inquiry,0.9801374077796936,low,low,0.8904159665107727
+36,"Hi Aetheros Support,
+
+I'm working with your API development and IAM services. I'm trying to figure out how to restrict API access based on user roles. Specifically, I want to limit certain API endpoints to users with 'administrator' roles.
+
+Could you please provide some guidance or documentation on how to achieve this?
+
+Thanks,
+John Doe",inquiry,inquiry,0.9804101586341858,low,low,0.8766899704933167
+37,"Hi,
+
+Here are the details you requested:
+
+* Region: us-east-1
+* Aetheros CLI version: 2.1.5
+* This is my first time deploying this specific application, but I have deployed others successfully in the past.
+
+Let me know if you need anything else.
+
+Thanks,
+John",issue,inquiry,0.8734708428382874,low,low,0.5374476909637451
+38,"Thanks, the hotfix resolved the issue.  
+
+However, it would be helpful if you could provide more timely updates for critical issues like this in the future.",issue,inquiry,0.6437216401100159,high,high,0.9707023501396179
+39,"Hi Aetheros Support,
+
+I'm writing to suggest an improvement for the /users/search endpoint in the API documentation. Currently, it only supports searching by username. It would be very helpful if we could also search by email address.
+
+This would greatly streamline our user management process.
+
+Thanks,
+John Doe",suggestion,suggestion,0.9934224486351013,low,low,0.579954981803894
+40,This issue has been resolved. Please confirm if you are able to access your cloud resources now. We will be conducting a thorough investigation into the root cause of this issue to prevent similar incidents in the future.,issue,issue,0.9299147129058838,high,high,0.9750419855117798
+41,It has been days with no resolution and minimal communication. This delay is causing significant damage to our project timeline and reputation. We need immediate action and a concrete timeline for resolution.,issue,issue,0.9210968017578125,high,high,0.9729686975479126
+42,"We're experiencing a critical issue with our Aetheros IAM integration. Our production API calls are failing due to incorrect permissions, causing a major outage. We need immediate assistance to resolve this. 
+
+Specifically, users with the ""Editor"" role are suddenly unable to access endpoints they could access yesterday. We haven't made any changes to our IAM configuration recently. 
+
+Please advise ASAP.",issue,issue,0.9299170970916748,high,high,0.9748008847236633
+43,"Dear John,
+
+We have identified the issue with the DataAnalystRole permissions. There was a misconfiguration in the policy attached to the role that was preventing access to the dashboards and reporting tools.
+
+We have corrected the misconfiguration, and users assigned to the DataAnalystRole should now be able to access the affected resources.
+
+We apologize for any inconvenience this issue may have caused.
+
+Please do not hesitate to contact us if you have any further questions.
+
+Sincerely,
+Aetheros Support",inquiry,issue,0.8701508045196533,medium,high,0.9270535111427307
+44,"Dear John,
+
+Thank you for contacting Aetheros Support. We understand you are experiencing difficulties with the Mercury language documentation.
+
+Can you please provide more details about your specific use case and what kind of error handling you are trying to implement? This will help us better understand your needs and provide a more accurate solution.
+
+Best regards,
+The Aetheros Support Team",issue,inquiry,0.9214130640029907,low,medium,0.46478283405303955
+45,"Dear John,
+
+Thank you for contacting Aetheros Support. We understand the urgency of the situation regarding the IAM service.
+
+To help us diagnose the issue effectively, could you please provide us with the following information:
+
+* Approximate times and dates when you observed this issue.
+* Any specific actions or events that seemed to precede the role loss.
+* The number of users affected (if known).
+
+We will investigate this issue with the highest priority. In the meantime, please don't hesitate to contact us if you have any further questions.
+
+Sincerely,
+Aetheros Support Team",issue,issue,0.8717194199562073,high,high,0.9146163463592529
+46,"Dear Isiah,
+
+Thank you for your email and suggestion regarding the visualization of role inheritance in our IAM service. We appreciate you taking the time to share your feedback and ideas with us.
+
+We understand the importance of having a clear and concise way to manage roles and permissions, especially as your organization grows. Your suggestion for a visualization tool is valuable, and we will definitely take it into consideration for future development of our IAM service. 
+
+In the meantime, would you be able to elaborate on the specific challenges you're facing with managing roles and permissions? Understanding your workflow and pain points in more detail would help us in exploring potential solutions and prioritizing this feature request. 
+
+Thank you again for your feedback. We value your input and strive to continuously improve our services.
+
+Sincerely,
+The Aetheros Support Team",suggestion,suggestion,0.9937823414802551,medium,low,0.4913817048072815
+47,"Hi Aetheros Support,
+
+I'm having trouble finding clear documentation on how to implement custom authentication using Mercury Language for our API. Specifically, I'm looking for examples on how to integrate with our existing OAuth 2.0 provider.
+
+Could you point me in the right direction?
+
+Thanks,
+John Doe",inquiry,inquiry,0.9797021150588989,low,low,0.8924747109413147
+48,"Hello John,
+
+We have identified an issue with Mercury version 2.3.1 deployments in the us-east-1 region. Our engineers are working on a resolution. 
+
+We will keep you updated on the progress and will let you know as soon as the issue is resolved.
+
+We apologize for the inconvenience.
+
+Sincerely,
+Aetheros Support Team",inquiry,issue,0.9002215266227722,medium,high,0.6076298952102661
+49,Our account ID is 84732. We haven't made any recent changes to the environment. This outage started abruptly.,issue,issue,0.9369130730628967,high,high,0.9777937531471252
+50,"Account ID: 8765432 
+Affected APIs: All of them. The issue is impacting our entire platform, not just specific APIs. 
+
+This is a critical issue, we need a resolution ASAP.",inquiry,issue,0.9305030703544617,high,high,0.9758037328720093
+51,Our production environment hosted on your Cloud Management platform is currently down. This is a critical issue impacting our business operations. We need this resolved ASAP. Please advise on the situation and estimated time to resolution.,issue,issue,0.939863920211792,high,high,0.9739109873771667
+52,"Dear John,
+
+Thank you for contacting Aetheros support. We understand the urgency of this situation and are looking into the issue with your API monitoring alerts.
+
+Could you please provide us with the following information to help us troubleshoot the problem more effectively:
+
+*   Specific examples of IAM role changes that did not trigger alerts.
+*   Screenshots of your API monitoring alert configuration.
+*   The timeframe during which these issues occurred.
+
+Once we have this information, we will be able to investigate further and provide a solution.
+
+Best regards,
+The Aetheros Support Team",issue,issue,0.8761076331138611,high,high,0.952991783618927
+53,"Dear John,
+
+Thank you for contacting Aetheros Support. We understand you're facing urgent issues with your cloud deployment and Mercury integration.
+
+We've escalated your case to our senior engineers.  Could you please provide the following to help us investigate further:
+
+*  The specific error messages from the Mercury runtime logs.
+*  Your current resource allocation in the Aetheros Cloud Management console.
+*  The approximate time these issues started occurring.
+
+We'll update you on our findings as soon as possible.
+
+Sincerely,
+The Aetheros Support Team",issue,issue,0.9001989364624023,high,high,0.7779579758644104
+54,"Dear John,
+
+This is to confirm that the issue with the API monitoring platform has been resolved. The latency reports should now be accurate.
+
+We apologize again for the inconvenience caused.
+
+Please don't hesitate to contact us if you have any further questions.
+
+Sincerely,
+Aetheros Support",issue,issue,0.8891294002532959,medium,high,0.8199244737625122
+55,"Hi Aetheros Support,
+
+I'm writing to suggest an improvement to the error reporting in Mercury Language. Currently, the error messages can be a bit cryptic and difficult to debug, especially when working with the API monitoring integration.
+
+It would be incredibly helpful if the error messages could be more verbose and include:
+
+* **Context:**  The specific line of code or function where the error occurred.
+* **Possible Causes:** A brief explanation of what might have caused the error.
+* **Suggested Solutions:**  Potential fixes or workarounds for the error.
+
+This would significantly speed up our development process and reduce the time spent on debugging. Thanks for considering this suggestion!
+
+Sincerely,
+John Doe",suggestion,suggestion,0.9938451647758484,high,medium,0.7729220390319824
+56,We are losing thousands of dollars every minute this is down. Can we please get an ETA on the resolution?,issue,issue,0.9050413966178894,high,high,0.9726170301437378
+57,"Dear John,
+
+Thank you for contacting Aetheros Support. We understand that you are experiencing issues with your API monitoring dashboard and a cloud instance.
+
+We are currently investigating both issues with high priority. We will provide updates as soon as we have more information.
+
+In the meantime, please let us know if you experience any further issues.
+
+Best regards,
+Aetheros Support Team",issue,issue,0.9172773957252502,medium,high,0.6479879021644592
+58,"Dear John,
+
+Thank you for contacting Aetheros Support. We understand you're facing difficulties deploying your Mercury application on our cloud platform. To better assist you, could you please provide the following information?
+
+* Error messages you're encountering (screenshots would be helpful)
+* Steps you've already taken to troubleshoot
+* Your application's resource requirements
+
+We'll investigate this further and get back to you as soon as possible.
+
+Best regards,
+Aetheros Support Team",inquiry,inquiry,0.5131493210792542,high,medium,0.6721518039703369
+59,"Thank you for contacting Aetheros support. We understand you're experiencing issues with the Mercury compiler. Can you please provide the following information so we can assist you further:
+
+* Version of the Mercury compiler you are using
+* Operating system and version
+* A sample code snippet that reproduces the error
+* The complete error message you are seeing
+
+Awaiting your response to better understand the problem.",issue,issue,0.9334726333618164,high,high,0.9716385006904602
+60,"Hi John,
+
+Thank you for reaching out to Aetheros Support. 
+
+We are aware of an issue affecting some users logging into the IAM dashboard.  Our engineers are currently working on resolving this issue. 
+
+We apologize for the inconvenience this may cause and will keep you updated on the resolution.
+
+Best Regards,
+Aetheros Support Team",inquiry,issue,0.9263727068901062,low,medium,0.7862716317176819
+61,"Dear John,
+
+Thank you for reaching out to Aetheros Support. 
+
+We understand you are facing difficulties integrating Mercury language functions with our IAM service and seeing inconsistencies in the API monitoring dashboard. This is certainly not the experience we want you to have.
+
+To help us investigate this further, could you please provide us with the following information?
+
+* The specific version of the Mercury language and IAM service you are using
+* A code snippet demonstrating how you are defining the API endpoint and attempting to enforce IAM roles
+* Screenshots of the inconsistencies you are observing on the API monitoring dashboard
+
+Once we have this information, we will be able to assist you more effectively. 
+
+Sincerely,
+Aetheros Support Team",issue,issue,0.7525947690010071,medium,medium,0.790998637676239
+62,"Dear John,
+
+Thank you for contacting Aetheros Support. We are experiencing a high volume of requests at the moment. We'll look into your issue as soon as possible.
+
+Best regards,
+Aetheros Support Team",inquiry,inquiry,0.6960492730140686,low,low,0.4203919768333435
+63,"Hi Aetheros Support,
+
+I've been noticing some strange latency spikes in our API monitoring dashboard since yesterday evening.  It doesn't seem tied to any particular endpoint or user action. Could you please take a look?
+
+Thanks,
+John Doe",inquiry,issue,0.7192367911338806,low,low,0.8965018391609192
+64,"Dear John,
+
+Thank you for your email and your valuable suggestion regarding our API monitoring service. We appreciate you taking the time to share your feedback with us.
+
+We understand the importance of a customizable alerting system and agree that it would greatly enhance our platform's functionality. Your suggestion has been forwarded to our product development team for further consideration and prioritization in our roadmap.
+
+While we cannot provide a specific timeline for implementation at this time, we will keep you informed of any developments regarding this feature.
+
+In the meantime, if you have any further suggestions or questions, please don't hesitate to contact us.
+
+Sincerely,
+Aetheros Support",suggestion,suggestion,0.9937295913696289,medium,medium,0.49477648735046387
+65,"Dear John,
+
+Thank you for contacting Aetheros Support. We understand you're facing deployment issues with your new cloud instance.
+
+To help us diagnose the problem, could you please provide us with the following information:
+
+* Instance ID
+* Timestamp of the attempted deployment
+* Relevant sections of your deployment logs
+
+Once we have this information, we'll be able to investigate further and assist you in resolving the issue.
+
+Best regards,
+Aetheros Support Team",issue,issue,0.7717270851135254,low,medium,0.8480215668678284
+66,"Thanks for the quick response and the links! I'll check them out.
+
+It would be great if you could keep me updated on the documentation progress. 
+
+Regards,
+Isiah",suggestion,suggestion,0.9208441972732544,low,low,0.8322622776031494
+67,"Dear John,
+
+We understand the urgency of the situation. Our team is currently investigating the issue with the highest priority. We will provide an update within the next hour.
+
+Sincerely,
+Aetheros Support",issue,issue,0.8993488550186157,high,high,0.9725098013877869
+68,"Hi John,
+
+Thank you for reaching out to us. We understand that you are facing difficulties with role assignment in our IAM service. To assist you better, could you please provide us with the following information?
+
+* User ID and role you are trying to assign.
+* Any error messages you encounter.
+* Screenshots of the issue.
+
+Once we have this information, we can investigate further and assist you in resolving the problem.
+
+Best regards,
+Aetheros Support",issue,issue,0.8483510613441467,medium,medium,0.5354857444763184
+69,"Dear John,
+
+Thank you for contacting Aetheros Support. We understand the urgency of the situation and are looking into the issue. 
+
+Could you please provide us with the following information to help us diagnose the problem:
+
+* Affected API endpoints
+* Error messages received by users
+* Timestamps of when the issue began
+
+We will update you as soon as we have more information. 
+
+Sincerely,
+Aetheros Support Team",issue,issue,0.9158939719200134,high,high,0.9662236571311951
+70,"Hi,
+
+Application ID: FR-7895
+Approximate Issue Start Time: 9:00 AM EST
+
+Thanks,
+John",issue,issue,0.5336374640464783,medium,medium,0.706117570400238
+71,"Dear John,
+
+We understand your frustration and are working diligently to address the remaining issues. Our engineering team is currently implementing further fixes and optimizations to ensure complete system stability.
+
+We will provide another update in 1 hour with a revised timeline for full resolution. To better understand the specific challenges you are facing, could you please provide more details on the persistent errors you are encountering?
+
+Thank you for your patience and understanding.
+
+Sincerely,
+Aetheros Support",inquiry,issue,0.8179624080657959,high,high,0.6447561979293823
+72,"Dear John,
+
+Thank you for reaching out to us and providing valuable feedback. We understand the inconvenience you're facing with the manual configuration process for API updates.
+
+We're currently exploring different automation options for smoother integration between our Cloud Management and API Development services. We'll keep you updated on any new features or improvements in this area.
+
+In the meantime, would you be interested in scheduling a brief call with one of our engineers to discuss potential workarounds or custom solutions that might be suitable for your current setup?
+
+We appreciate your patience and understanding.
+
+Best regards,
+Aetheros Support",suggestion,suggestion,0.6699061989784241,medium,low,0.7093687653541565
+73,"Hi John,
+
+We've investigated the information you provided.  We're escalating this issue to our senior engineers for further analysis.
+
+We'll update you as soon as we have more information. 
+
+Regards,
+The Aetheros Support Team",inquiry,issue,0.7815498113632202,low,medium,0.6945510506629944
+74,"Dear John, We have resolved the issue with the API monitoring dashboard. It was a temporary data synchronization problem. The dashboard should now be populated with real-time data. We apologize for any inconvenience this may have caused. Please don't hesitate to contact us if you experience any further issues.",issue,issue,0.9250315427780151,high,high,0.9749455451965332
+75,"Hi Aetheros Support,
+
+I'm having trouble understanding how role inheritance works in your IAM service. Specifically, if I have a role that inherits permissions from another role, and I then revoke one of those permissions from the parent role, does that change also apply to the child role?
+
+Thanks,
+John Doe",inquiry,inquiry,0.9758517742156982,low,low,0.8499089479446411
+76,"Hi,
+
+Here's the information you requested:
+
+- Account ID: 87654321
+- Roles: 'Data Analyst' and 'Marketing Specialist'
+- No specific error message, just a spinning wheel that never completes the action.
+
+Let me know if you need anything else.
+
+Regards,
+John",inquiry,issue,0.8112888932228088,high,medium,0.6486617922782898
+77,"Hi Aetheros Support,
+
+We're experiencing issues deploying our latest build to the staging environment managed through your platform.  The deployments are consistently failing, and we're unable to identify the root cause from the logs provided.
+
+Could you please investigate this urgently? We have a release pending, and this blockage is impacting our timeline.
+
+Application name:  ExampleApp
+Environment: Staging
+Approximate time the issue began: 2023-10-26 08:00 UTC
+
+Thanks,
+John Doe
+DevOps Engineer
+Example Company",issue,issue,0.9010378122329712,low,medium,0.7641430497169495
+78,"Hi John,
+
+Thank you for reaching out to Aetheros Support. 
+
+Yes, you can achieve this level of granularity with the IAM service. You can create separate roles for ""Developers"" and ""Operations"", then define specific policies that grant read-only access to certain cloud resources for the ""Developers"" role and full control for the ""Operations"" role.
+
+Our documentation provides detailed instructions and examples on how to create and manage roles and policies: [Link to documentation]
+
+Please let us know if you have any other questions.
+
+Best regards,
+Aetheros Support",inquiry,inquiry,0.9734824299812317,low,low,0.8941031694412231
+79,"We are experiencing issues with our API monitoring on your platform. The dashboard is showing our API is down and returning errors, but we are able to access the API directly without any problems. 
+
+This is causing a lot of confusion and unnecessary alerts. Could you please investigate this urgently?",issue,issue,0.9409877061843872,high,high,0.9714117646217346
+80,"Hi Aetheros Support,
+
+Here's the information you requested:
+
+* We first noticed the issue on October 25th.
+* We haven't encountered any specific error messages.
+* We estimate that we make approximately 5000 requests to the '/products' endpoint during peak hours.
+
+Please let me know if you require any further information.
+
+Thanks,
+John Doe",issue,issue,0.8706886768341064,low,medium,0.5247126817703247
+81,"Aetheros Support,
+
+Account ID: 8765XXXX
+Affected Region: us-east-1
+No recent changes to the scaling configuration.
+
+This is affecting our business operations severely. Do you have any updates?
+
+John",issue,issue,0.9087749719619751,medium,high,0.9355921149253845
+82,"Hi,
+
+It's been over 2 hours, and the issue is still ongoing. Our team is unable to effectively monitor our APIs. Do you have any updates or estimated time of resolution?",issue,issue,0.9175966382026672,high,high,0.9573622345924377
+83,"Dear John,
+
+Thank you for reaching out to Aetheros Support. We understand the urgency of the situation and are actively investigating the issue with your cloud instance scaling.
+
+To assist us in resolving this issue quickly, could you please provide the following information?
+
+* Your Aetheros account ID
+* The specific instance type experiencing the issue
+* The approximate time the issue began
+* Any recent changes made to your cloud configuration
+
+We will keep you updated on our progress. 
+
+Sincerely,
+The Aetheros Support Team",issue,issue,0.89299076795578,medium,high,0.6227206587791443
+84,"Hi Aetheros Support,
+
+I have a question regarding the scaling limits of cloud resources for the basic plan. I couldn't find specific details on your website. Can you please clarify what are the maximum limits for scaling resources like RAM and CPU on the basic plan?
+
+Thanks,
+John Doe",inquiry,inquiry,0.9759331345558167,low,low,0.893625020980835
+85,"Hi Aetheros Support,
+
+We've been experiencing some difficulties scaling our application on your cloud platform recently.  We're seeing significant slowdowns during peak hours, and our own attempts to adjust resource allocation haven't resolved the issue.
+
+Could you please take a look and advise on how we can optimize our setup for better performance?
+
+Thanks,
+John Doe",issue,inquiry,0.6446998715400696,low,low,0.7554178237915039
+86,"Dear John,
+
+We have identified the issue and are working on a fix. It seems a recent update caused unexpected behavior in the monitoring system. We are rolling back the update and expect services to resume within the next hour. We apologize for the inconvenience this may have caused.
+
+We will keep you updated on the progress.
+
+Best regards,
+Aetheros Support Team",issue,issue,0.9438952207565308,high,high,0.9398903846740723
+87,"Hi Aetheros Support,
+
+I'm writing to suggest an improvement to the cloud management platform's deployment process. Currently, setting up automated deployments for our applications involves quite a few manual steps and configurations. 
+
+It would be incredibly helpful if you could explore ways to simplify this process, perhaps by integrating more directly with popular CI/CD tools or providing more pre-configured deployment templates. 
+
+Additionally, having more detailed documentation and examples specifically around complex deployment scenarios would be highly beneficial.
+
+Thanks,
+John Doe",suggestion,suggestion,0.9937639832496643,low,low,0.7211126089096069
+88,"Dear John,
+
+Thank you for your email and your suggestion for the API Monitoring dashboard. We appreciate you taking the time to provide feedback.
+
+We understand the importance of customization and agree that the ability to tailor the dashboard to specific needs would be highly beneficial. We have taken your suggestion on board and will be reviewing the feasibility of implementing customizable widgets in future updates to the platform.
+
+We will keep you informed of any developments regarding this feature.
+
+In the meantime, if you have any other suggestions or encounter any issues, please don't hesitate to contact us.
+
+Sincerely,
+The Aetheros Support Team",suggestion,suggestion,0.9939490556716919,low,medium,0.5160188674926758
+89,"Dear John,
+
+Thank you for reaching out and sharing your valuable suggestion regarding the API monitoring dashboard. We appreciate your proactive approach in helping us improve our services.
+
+We understand the importance of customizable metrics and alert thresholds for effective monitoring. We have forwarded your suggestion to our product development team for further evaluation and consideration in future updates.
+
+In the meantime, could you please provide us with more details about your specific use case and the metrics you'd like to prioritize? This information will be valuable for our team's assessment.
+
+Thank you for your patience and understanding.
+
+Sincerely,
+Aetheros Support Team",suggestion,suggestion,0.9933704137802124,medium,medium,0.4840221405029297
+90,"Thank you for contacting Aetheros Support. We understand the urgency of this situation. We are currently experiencing a temporary outage in some of our cloud regions. Our engineers are actively working on resolving this issue. 
+
+We will provide updates every hour on the situation. We apologize for the inconvenience.",issue,issue,0.938418984413147,high,high,0.9741389751434326
+91,"We're experiencing critical issues with our Aetheros cloud infrastructure and API performance.
+
+Since this morning, our application has been incredibly slow and unresponsive, particularly during peak usage hours. We suspect problems with the cloud resource scaling configuration, as we're not seeing the expected automatic adjustments to handle increased load.
+
+Additionally, our API monitoring dashboard is showing alarming spikes in latency and error rates. This is severely impacting our services and causing significant disruption to our operations and customers.
+
+We need immediate assistance to diagnose and resolve these issues. Please contact us as soon as possible to discuss next steps and provide a timeline for resolution.",issue,issue,0.8521499037742615,high,high,0.96409010887146
+92,"Dear John,
+
+We have implemented a fix for the API issue. Our monitoring shows that all endpoints are functioning normally now. Please confirm if the issue is resolved on your end.
+
+We apologize for the inconvenience caused.
+
+Sincerely,
+The Aetheros Support Team",issue,issue,0.9288135170936584,high,high,0.9700350761413574
+93,"Hello John,
+
+Thank you for reaching out to us. You are absolutely correct, the current implementation of the '/products' endpoint does not return the product ID in the response for security reasons. 
+
+We are aware that this can be inconvenient and we are working on a solution to provide a secure way to access the newly created ID in a future update.
+
+As a workaround, you can retrieve the product ID by making a GET request to the '/products' endpoint and filtering by the product name or other unique identifier you used during creation.
+
+We apologize for the inconvenience. Please let us know if you have any further questions.
+
+Best Regards,
+The Aetheros Support Team",issue,issue,0.7095988392829895,low,medium,0.724537193775177
+94,"Hi Aetheros Support Team,
+
+We've been experiencing intermittent high latency with our API that's connected to your API monitoring service for the past few hours.  This is causing significant performance degradation for our users. 
+
+We've checked our end and everything seems to be functioning correctly. Can you please investigate this issue urgently and provide an update?
+
+Thanks,
+John Doe",issue,issue,0.9216547012329102,medium,medium,0.8489652872085571
+95,"Hello John,
+
+Thank you for reaching out. We'd be happy to assist you with the latency spikes you're experiencing.
+
+To help us pinpoint the cause, could you please provide us with the following information:
+
+* Approximate timeframes when you noticed the latency spikes.
+* The specific API endpoint(s) affected.
+* Any recent changes made to your API or infrastructure.
+
+Once we have this information, we can investigate further and provide you with tailored recommendations.
+
+Best regards,
+The Aetheros Support Team",inquiry,inquiry,0.9523932933807373,low,low,0.8913739323616028
+96,"We've been experiencing a significant increase in false positives from our API monitoring setup over the past few hours. 
+
+Specifically, we're seeing alerts for endpoint /v2/users that are reporting 500 errors, but upon investigation, the endpoint is functioning correctly and logs don't show any errors. 
+
+This is causing significant disruption to our operations team as they're constantly investigating these false alarms. 
+
+We need this resolved urgently. Please advise on next steps.",issue,issue,0.9364394545555115,high,high,0.9733072519302368
+97,"Dear Kenneth,
+
+Thank you for contacting Aetheros Support. We understand the urgency of this issue and are committed to helping you resolve it.
+
+To assist us in diagnosing the problem, could you please provide the following information:
+
+* The specific error messages and stack traces from your Mercury deployment logs
+* The version of the Mercury language runtime you are using
+* The configuration settings related to API communication within your Mercury application
+
+Once we have this information, we can investigate further and provide you with a solution.
+
+Best regards,
+The Aetheros Support Team",issue,issue,0.805227518081665,high,high,0.7780745029449463
+98,"Hi,
+
+Here is the information you requested:
+
+* Organization ID: 87432
+* Role: Data Analyst
+* Username: jane.smith
+
+This is really impacting our operations.  Please let me know when this will be resolved.
+
+Thanks,
+John",issue,issue,0.8885561227798462,medium,high,0.8553815484046936
+99,"Hi Aetheros Support,
+
+We're experiencing two critical issues with our Aetheros services:
+
+1. **Cloud Costs Exploding:** Our cloud costs have spiked dramatically in the last 24 hours, far exceeding typical usage patterns. We haven't deployed any major changes recently, so we're unsure what's causing this sudden increase.
+
+2. **API Monitoring Down:**  Our API monitoring dashboard has been offline for the past few hours. We're completely blind to the performance and health of our APIs. This is a major concern as it impacts our ability to identify and resolve issues quickly.
+
+We need immediate assistance to diagnose and resolve these problems. Please advise on the next steps.
+
+Sincerely,
+John Doe",issue,issue,0.8388457894325256,high,high,0.5463268160820007
+100,"We are experiencing a critical issue with our production system that utilizes the Mercury language. We are encountering a compiler error that is preventing our application from starting. This is a high-priority issue as it is causing a complete outage of our services. We need immediate assistance to resolve this.
+
+Error details:
+
+* Mercury Compiler version: 1.2.3
+* Error code: MC-0014
+* Error message: 'Unexpected token: <...>' 
+
+Please advise on how to proceed as soon as possible.",issue,issue,0.9371996521949768,high,high,0.975498616695404
+101,"Dear John,
+
+Thank you for contacting Aetheros support. We understand the urgency of the situation and are looking into the issue you described. 
+
+To help us diagnose the problem further, could you please provide the following information:
+
+* Which environment are you facing this issue in (development, staging, production)?
+* Could you share a screenshot of the error message you are seeing?
+* Have you made any recent changes to your IAM policies or roles?
+
+We will do our best to get back to you with a solution as soon as possible.
+
+Best regards,
+The Aetheros Support Team",issue,issue,0.8075370788574219,high,high,0.8986577391624451
+102,"Hi Aetheros Support,
+
+We are experiencing a critical issue with our API monitoring dashboard. It is showing incorrect data, and we are experiencing significant API downtime that is not reflected in the dashboard.
+
+This is causing major disruptions to our services. We need this resolved urgently.
+
+Can you please investigate and provide an update ASAP?
+
+Sincerely,
+John Doe",issue,issue,0.9178172945976257,high,high,0.8791125416755676
+103,This is impacting our business critically. Do you have an estimated time for resolution?,issue,issue,0.9075232744216919,high,high,0.9710177779197693
+104,"We are experiencing a critical issue with our Aetheros IAM service. Users are randomly losing access to resources, and we haven't been able to identify a pattern. This is causing major disruptions to our operations.
+
+We need immediate assistance to resolve this issue. Please advise on next steps.",issue,issue,0.9329020977020264,high,high,0.976000964641571
+105,"Hello Aetheros Support,
+
+I'm encountering an issue with role-based permissions in Mercury Language.  I've defined roles and assigned them to users in your IAM service, but these permissions don't seem to be correctly enforced within my Mercury code. Specifically, users assigned to a limited role are still able to execute functions they should not have access to.
+
+Could you please advise on how to ensure my Mercury code respects the roles and permissions I've set in the IAM service?
+
+Thanks,
+John Doe",issue,issue,0.8774300813674927,medium,medium,0.642570972442627
+106,"Thank you for contacting Aetheros support. We understand you're experiencing a critical issue with IAM authentication for your Mercury-based API. To assist you effectively, could you please provide the following information?
+
+1. The specific error messages you are encountering.
+2. The version of the Mercury SDK you are using.
+3. A code snippet demonstrating how you are making the API call and handling authentication.
+
+Once we have this information, we can investigate the issue further and provide a solution.",inquiry,issue,0.9313336610794067,high,high,0.8773414492607117
+107,"Dear John,
+
+Thank you for reaching out to Aetheros Support. We understand you are experiencing issues with API Monitoring data accuracy for your application 'MyApp' in the production environment.
+
+We are currently investigating this issue and will keep you updated on our progress. In the meantime, could you please provide us with the specific metrics that are showing discrepancies and the timeframe for these inconsistencies?
+
+Best regards,
+Aetheros Support Team",issue,issue,0.8911914825439453,low,medium,0.7511853575706482
+108,"Hi Aetheros Support,
+
+We've been utilizing your IAM service for a few months now and are very happy with its features and performance. However, we believe adding role inheritance functionality could greatly simplify our user management.
+
+Specifically, it would be beneficial to have roles inherit permissions from parent roles. For instance, a ""Senior Developer"" role could inherit all permissions from a ""Developer"" role, with the ability to add specific permissions as needed.
+
+This would reduce redundancy in our permission setup and make it easier to manage users as our team grows.
+
+Could you please consider implementing this feature in a future release?
+
+Thanks,
+Isiah Rippin",suggestion,suggestion,0.9924778342247009,medium,low,0.6332514882087708
+109,"Hi John,
+
+Thank you for reaching out to Aetheros Support.
+
+We understand that you're experiencing compiler errors with the Mercury language. We apologize for any inconvenience this may cause.
+
+To better assist you, could you please provide us with the following information:
+
+* Version of the Mercury compiler you're using
+* Your operating system and its version
+* Any relevant code snippets or error messages
+
+Once we have this information, we'll be able to investigate further and assist you with resolving the issue.
+
+Best regards,
+Aetheros Support",issue,issue,0.905450165271759,medium,medium,0.7657641768455505
+110,"Sure, my account ID is 746295.",inquiry,issue,0.7020876407623291,low,high,0.8395135998725891
+111,"Hi Aetheros Support Team,
+
+I am experiencing an urgent issue with the IAM service. I am unable to assign new roles to users within our organization. 
+
+I have tried multiple browsers and cleared my cache, but the issue persists. This is severely impacting our workflow as new team members cannot access the resources they need.
+
+Could you please investigate this issue as soon as possible and provide a solution?
+
+Thank you,
+Isiah Ritchie",issue,issue,0.8870460987091064,medium,medium,0.6990362405776978
+112,"Hi John,
+
+We have identified the issue. There was a temporary outage in our service that was causing the 502 error. The issue has now been resolved. Please try deploying your code again, and it should work as expected. 
+
+We apologize for any inconvenience this may have caused.
+
+Best regards,
+The Aetheros Support Team",issue,issue,0.9415677785873413,high,high,0.7099714279174805
+113,"Hi Aetheros Support,
+
+I'm having trouble getting role-based permissions to work correctly within a Mercury language script. I've defined roles and assigned users to them in your IAM service, but the script doesn't seem to be respecting those permissions when making API calls.
+
+Could you please provide some guidance or documentation on how to properly integrate IAM roles with Mercury scripts?
+
+Thanks,
+John Doe",issue,issue,0.707539975643158,low,low,0.830861508846283
+114,"Dear John,
+
+We have identified the root cause of the outage as a network connectivity issue within our data center. Our engineers are working to reroute traffic and restore services. We apologize for the inconvenience caused.
+
+Best regards,
+Aetheros Support Team",issue,issue,0.9173294305801392,high,high,0.9495986104011536
+115,"Hi Support,
+
+Here's the information you requested:
+
+* Error message: ""Deployment failed. Please try again later.""
+* Mercury version: 1.2.5
+* Account ID:  87654321
+
+This issue is preventing me from meeting a critical deadline. Any assistance would be greatly appreciated.
+
+Best regards,
+John",issue,issue,0.9092891812324524,medium,medium,0.49018537998199463
+116,"Dear John Doe,
+
+We have identified the issue causing the API access errors and monitoring dashboard outage. It was related to a recent security update that inadvertently impacted access permissions. Our team has implemented a fix, and API access should be restored now. The monitoring dashboard will be available shortly.
+
+We apologize for the inconvenience this outage caused.
+
+Sincerely,
+The Aetheros Support Team",issue,issue,0.9421137571334839,high,high,0.9745885133743286
+117,"Dear Isiah,
+
+Thank you for reaching out to us regarding the scaling and latency issues you're experiencing. We understand this is impacting your application performance, and we're committed to assisting you in resolving these matters.
+
+To help us investigate further, could you please provide us with the following information?
+
+*  Specific times and dates when you experienced the issues
+*  Screenshots or error logs (if any)
+*  Any recent changes made to your application or cloud configuration
+
+Once we have this information, we can start our investigation and provide you with a solution as quickly as possible.
+
+Sincerely,
+The Aetheros Support Team",issue,issue,0.9025765657424927,low,medium,0.526294469833374
+118,"Attached are the details of the IAM role update and the error logs from our system. 
+
+We need this fixed ASAP as this is a major disruption to our service.",issue,issue,0.9210145473480225,high,high,0.9765317440032959
+119,Our production environment hosted on your cloud platform is currently down. We are experiencing a complete outage and cannot access our instances. This is a critical issue impacting our business operations. Please advise ASAP.,issue,issue,0.9339326024055481,high,high,0.9755967259407043
+120,"Dear John,
+
+Thank you for contacting Aetheros Support. We understand you are facing performance issues with your API hosted on our platform. We're here to help.
+
+To assist us in investigating this issue further, could you please provide us with the following information:
+
+*  The approximate times and dates when you experienced the performance issues.
+*  Any error messages you encountered.
+*  Your API's current scaling configuration on Aetheros Cloud.
+
+Once we have this information, we can begin our investigation and work towards a resolution.
+
+Best Regards,
+Aetheros Support Team",inquiry,issue,0.8700641989707947,medium,medium,0.8594675660133362
+121,This is significantly impacting our business. Do you have an ETA for resolution?  Any updates would be appreciated. ,issue,issue,0.9323362708091736,high,high,0.9734430909156799
+122,"Dear Isabella,
+
+Thank you for reaching out and for your suggestion regarding WebSocket support for our API development services. We appreciate you taking the time to share your feedback with us.
+
+We understand the growing need for real-time capabilities in web applications. While we don't currently offer native WebSocket support, we are constantly evaluating new technologies and solutions to enhance our offerings. 
+
+We have taken note of your suggestion and will keep it in mind as we plan for future development. We will be sure to share it with our product team for their consideration.
+
+In the meantime, you might be interested in exploring alternative approaches for real-time communication within our existing framework.  We encourage you to check our documentation for potential workarounds.
+
+Thank you again for your valuable feedback.
+
+Sincerely,
+The Aetheros Support Team",suggestion,suggestion,0.9928619265556335,low,low,0.6526766419410706
+123,The issue persists. We are still unable to access our cloud resources and getting the same errors. This is unacceptable - our business is losing thousands of dollars every hour.,issue,issue,0.9407272338867188,high,high,0.9760953187942505
+124,"Dear John,
+
+We understand the urgency and the inconvenience this issue is causing. We have identified the root cause of the problem and implemented a fix. The issue should now be resolved.
+
+Could you please confirm if the deployment issues are resolved on your end? 
+
+We are here to assist further if needed. Once again, we apologize for the prolonged downtime and the impact it has had on your operations.
+
+Sincerely,
+Aetheros Support Team",issue,issue,0.9358434677124023,high,high,0.9362668395042419
+125,"Our production API is currently down. We are experiencing a complete outage. The issue seems to be related to our cloud servers managed by Aetheros. We are unable to access the servers, and our monitoring tools show them as offline. This is a critical issue impacting our business operations. Please advise ASAP.",issue,issue,0.9378650188446045,high,high,0.9766204357147217
+126,"Dear John Doe,
+
+Thank you for contacting Aetheros support. We understand you are experiencing critical issues with API access and the monitoring dashboard. We have escalated this issue to our senior engineers and are actively investigating the root cause. We will keep you updated on our progress.
+
+Sincerely,
+The Aetheros Support Team",issue,issue,0.9293310046195984,high,high,0.9726818799972534
+127,"Our production API, built using Aetheros API development services, has been experiencing intermittent downtime for the past hour. This is severely impacting our critical business operations. 
+
+We are seeing a large number of 500 errors and significantly increased latency.  We've also noticed unusual spikes in resource usage within our cloud environment managed by Aetheros.
+
+We require immediate assistance to identify and resolve the root cause of this issue. Please advise on the next steps.",issue,issue,0.9252456426620483,high,high,0.9715410470962524
+128,Thank you for contacting Aetheros support. We understand you are experiencing issues with API monitoring reflecting IAM changes. Can you please provide your Aetheros account ID and the specific users whose permissions are not being reflected? This will help us investigate further.,issue,issue,0.9353733658790588,high,high,0.9725031852722168
+129,"Hi,
+
+Here is the requested information:
+
+* Error Message: ""Deployment Failed. Error code: 502""
+* Application: ""ProductX-API""
+* Environment: ""Production""
+* Changes: We recently upgraded our Mercury version to the latest release.
+
+Let me know if you need anything else.
+
+Thanks,
+John",issue,issue,0.9011304378509521,high,high,0.6963319182395935
+130,"Thanks for the quick response! This is helpful. I'll have a look at the documentation and reach out if I need further assistance.
+
+Regards,
+John",inquiry,inquiry,0.9801728129386902,low,low,0.8690469861030579
+131,"Dear John,
+
+Thank you for contacting Aetheros Support. We understand the urgency of this issue and apologize for the inconvenience it's causing.
+
+Our team is currently investigating the root cause of the increased API response times. We will keep you updated on our progress and provide an estimated resolution time as soon as possible.
+
+In the meantime, could you please provide us with the following information to assist with our investigation:
+
+* Approximate time the issue started
+* Any recent changes made to your system or the API calls
+* Screenshots of any error messages you are seeing
+
+Thank you for your patience and cooperation.
+
+Sincerely,
+Aetheros Support",issue,issue,0.9317464232444763,high,high,0.9385174512863159
+132,"Dear John,
+
+We have identified the issue with your production API. It appears to be related to a recent update on our end. We have implemented a fix, and your API should now be back online.
+
+We sincerely apologize for the inconvenience caused. Please let us know if you experience any further problems.
+
+Sincerely,
+The Aetheros Support Team",issue,issue,0.9270102977752686,high,high,0.9556868076324463
+133,"Dear John,
+
+We have identified the issue. There's a known incompatibility between Mercury Language v2.3.1 and the latest version of our IAM service. A fix for this is scheduled to be released next month.
+
+In the meantime, as a workaround, you can revert your IAM service to the previous version (v1.8.2). This should resolve the conflict.
+
+We apologize for the inconvenience and appreciate your patience. Let us know if you face any further issues.
+
+Regards,
+Aetheros Support Team",issue,issue,0.7946954965591431,high,high,0.9286516904830933
+134,"Dear John,
+
+Thank you for providing the information. We have identified the issue and resolved it by optimizing some background processes that were impacting performance during peak hours.
+
+You should see improved performance now. Please monitor your instances and let us know if you encounter any further problems.
+
+We appreciate your patience and understanding.
+
+Best regards,
+Aetheros Support Team",issue,issue,0.621093213558197,low,medium,0.6084825992584229
+135,"Dear John,
+
+Thank you for contacting Aetheros Support. We understand you're experiencing issues deploying your Mercury code to our cloud platform. 
+
+To better assist you, could you please provide us with the following information:
+
+* The specific error message you're receiving.
+* The version of the Mercury language you are using.
+* Your Aetheros Cloud account ID.
+
+Once we have this information, we can investigate the issue further and provide a solution.
+
+Sincerely,
+Aetheros Support Team",issue,issue,0.8976616859436035,medium,medium,0.8434075117111206
+136,"Dear John,
+
+Thank you for contacting Aetheros Support. We understand that you are experiencing API gateway latency issues, and we are committed to resolving this for you promptly.
+
+Our team is currently investigating the root cause of the latency. To assist us further, could you please provide the following information:
+
+* **Timeframe:** When did you first notice these latency spikes?
+* **Frequency:** Is the latency constant or intermittent?
+* **Error Messages:** Are you encountering any specific error messages?
+
+We will keep you updated on our progress and will be in touch shortly with an update.
+
+Best regards,
+Aetheros Support",issue,issue,0.916363000869751,medium,medium,0.6873874664306641
+137,"Hi John,
+
+Thank you for reaching out to Aetheros Support.
+
+We've received your inquiry about the latency spikes you're experiencing. To help us investigate further, could you please provide the following information:
+
+*  The specific API endpoint(s) experiencing the latency.
+*  The approximate time frame when you noticed these spikes.
+*  Any recent changes or deployments you've made to your application.
+
+Once we have this information, we'll be able to assist you more effectively.
+
+Best regards,
+Aetheros Support Team",inquiry,inquiry,0.6394768953323364,low,low,0.8956095576286316
+138,"We have identified the issue. There is a known bug in the Mercury language compiler related to permission handling in API calls.  A fix for this bug will be released in the next version, scheduled for deployment tomorrow at 10:00 AM UTC. In the meantime, you can work around this issue by modifying your code as follows: [workaround instructions]. We apologize for the inconvenience caused.",issue,issue,0.9279763102531433,high,high,0.9739716053009033
+139,"Hi Aetheros Support,
+
+I'm having some trouble understanding the role permissions for the API Monitoring platform.  Specifically, I'm trying to create a role that can view dashboards but not edit them. Is this possible with the current setup?
+
+Thanks,
+John Doe",inquiry,inquiry,0.9785178899765015,low,low,0.8483058214187622
+140,"Hi Aetheros Support,
+
+I'm working on a project using Mercury Language and I'm having some trouble understanding the best practices for error handling. Specifically, I'm unsure about how to implement custom error types and handle them gracefully within my API endpoints.
+
+Could you provide some guidance or point me to relevant documentation on this topic?
+
+Thanks,
+Isabella Jones",inquiry,inquiry,0.9723953604698181,low,low,0.8951937556266785
+141,"Hi Aetheros Team,
+
+I'm interested in learning more about your API development services. We are looking to build a robust and scalable API for our e-commerce platform.
+
+Could you please provide more information about your experience in building e-commerce APIs, specifically:
+
+* What frameworks and technologies do you utilize?
+* What security measures do you implement?
+* Can you share any case studies or examples of previous e-commerce API projects?
+
+Thank you for your time and consideration.
+
+Sincerely,
+Harvey Bergnaum",inquiry,inquiry,0.9824435710906982,low,low,0.7874364256858826
+142,"We're seeing ""Access Denied"" errors when trying to access any cloud resources through the Aetheros portal. Our internal monitoring shows authentication requests are failing with error code: IAM-403. We haven't changed any IAM configurations recently.",issue,issue,0.937609851360321,high,high,0.9712402820587158
+143,"We are experiencing critical issues with API access. Our applications are being denied access despite having the correct IAM roles assigned. This is causing a major disruption to our services. 
+
+We have verified the following:
+
+- The IAM roles have the necessary permissions.
+- The roles are correctly attached to the instances.
+- There are no network connectivity issues.
+
+We have also checked the API monitoring dashboard, but it doesn't show any unusual spikes or errors that could explain this. 
+
+Please advise on how to resolve this issue as soon as possible.",issue,issue,0.9420493841171265,high,high,0.9736411571502686
+144,"Hi,
+
+The user role is 'Prod_Engineer' and we need to revoke its write access to the database server. The cloud instance experiencing issues is 'instance-prod-01'.
+
+Thanks for your quick response.
+
+Regards,
+Kenneth",issue,issue,0.892578125,medium,medium,0.8652600646018982
+145,"Hi Aetheros Support,
+
+We're evaluating Mercury for our API development and are impressed with its features. We're a bit stuck on how cloud deployments are managed with Mercury.  Could you provide some documentation or examples?
+
+Thanks,
+John Doe",inquiry,inquiry,0.9662391543388367,low,low,0.8565516471862793
+146,"Dear John,
+
+Thank you for contacting Aetheros Support. We understand the urgency of this issue and are here to assist you.
+
+To help us diagnose the problem more effectively, could you please provide the following information:
+
+* The specific error messages you are encountering.
+* The relevant code snippets from your API implementation.
+* A screenshot of the error from your API monitoring dashboard.
+
+Once we have this information, we can begin troubleshooting immediately.
+
+Best regards,
+Aetheros Support Team",issue,issue,0.9251483678817749,high,high,0.9043121337890625
+147,"Dear John,
+
+Our engineering team has identified the issue causing the missing alerts for IAM role changes. A recent platform update introduced a bug affecting this specific monitoring feature.
+
+We have implemented a fix, and our monitoring system is now correctly sending alerts for IAM role modifications.
+
+We sincerely apologize for the inconvenience caused. To ensure the issue is fully resolved on your end, kindly clear your browser cache and cookies before accessing the Aetheros platform.
+
+Please do not hesitate to contact us if you have any further questions or concerns.
+
+Best regards,
+Aetheros Support",issue,issue,0.9287572503089905,high,high,0.9029757976531982
+148,"Dear John,
+
+Thank you for your valuable feedback regarding our API monitoring dashboard. We appreciate you taking the time to share your thoughts on how we can improve the user experience.
+
+We completely understand the need for customization, especially when it comes to monitoring critical metrics. We've already started exploring different approaches to implement customizable dashboards, and your suggestion aligns perfectly with our roadmap.
+
+While we don't have a definite timeline for this feature release, we'll keep you updated on our progress.
+
+In the meantime, please don't hesitate to reach out if you have any other suggestions or questions.
+
+Best regards,
+The Aetheros Support Team",suggestion,suggestion,0.9934531450271606,medium,low,0.686291515827179
+149,"Hi Aetheros Support,
+
+We're currently evaluating your API monitoring and IAM services for our web application. We're particularly interested in understanding how seamlessly these two services integrate.
+
+Specifically, we'd like to know if it's possible to:
+
+1. **Trigger automated alerts within the API monitoring platform based on specific IAM events.** For instance, if a user's role changes, we want to be notified through the API monitoring dashboard.
+2. **Utilize user roles and permissions defined within the IAM service to control access to specific API monitoring dashboards and metrics.**
+
+Could you please provide some insights or documentation on these integration capabilities?
+
+Thank you,
+John Doe",inquiry,inquiry,0.98275226354599,low,medium,0.6091700196266174
+150,"Dear John,
+
+Thank you for contacting Aetheros Support. We understand the urgency of this issue and our team is looking into it. 
+
+To assist us in resolving this quickly, could you please provide the following information:
+
+* The specific API endpoint you are trying to access.
+* A code snippet demonstrating your API request and how you're handling the authentication.
+* The timestamp of when the error occurred.
+
+We will investigate this further and get back to you with an update shortly.
+
+Best regards,
+Aetheros Support",inquiry,issue,0.8884592056274414,high,high,0.8722749352455139
+151,"We are experiencing a critical issue with our API monitoring setup through Aetheros. We have configured alerts to trigger upon any changes made to IAM roles and permissions. However, we've noticed that these alerts are not being generated, leading to unnoticed security vulnerabilities.
+
+We heavily rely on your platform to maintain the integrity of our system, and this issue poses a significant risk to our operations. We need immediate assistance in resolving this matter.
+
+Please investigate this issue as a matter of urgency and provide a solution as soon as possible.",issue,issue,0.9404445290565491,high,high,0.9752432107925415
+152,"Hi Aetheros Support,
+
+We are experiencing a critical issue where our API monitoring dashboard is showing our main API as down, but we are able to access it without issue.  We haven't changed any IAM roles or permissions recently. 
+
+This is causing false alarms and confusion. Please advise ASAP on how to resolve this issue.
+
+Regards,
+John Doe",inquiry,issue,0.9137449264526367,high,high,0.8929499983787537
+153,We are experiencing severe latency spikes with our API that is being monitored by your platform. This is causing major disruption to our services. We need immediate assistance to identify the root cause and resolve this issue.,inquiry,issue,0.9360763430595398,high,high,0.9696916937828064
+154,"Hi Aetheros Support,
+
+Thanks for getting back to me. I've attached the Mercury script, the IAM role details, and the error logs I'm receiving.
+
+Let me know if you need anything else. 
+
+Regards,
+John",inquiry,issue,0.7098382115364075,low,medium,0.5384567975997925
+155,"Hello Aetheros Support,
+
+I'm having trouble finding clear documentation on how to implement custom error handling in Mercury. The examples in the current documentation are very basic and don't cover my specific use case. 
+
+Could you please provide more detailed documentation or examples on this topic?
+
+Thanks,
+John Doe",issue,inquiry,0.9794960618019104,low,low,0.869293749332428
+156,"Dear John,
+
+Thank you for contacting Aetheros Support. We understand the urgency of the situation and are looking into the compiler errors and API gateway timeouts you reported. 
+
+Could you please provide us with the following information to assist in our investigation:
+
+* Specific error messages from the Mercury compiler
+* Logs from your API gateway around the time of the timeouts
+* Version of the Mercury compiler and runtime you are using
+* Any recent changes made to your API code or configuration
+
+Once we have this information, we can investigate further and provide a solution. 
+
+Sincerely,
+The Aetheros Support Team",issue,issue,0.9269506931304932,high,high,0.9619706273078918
+157,"Dear John,
+
+Thank you for contacting Aetheros Support. We understand the severity of this issue and have escalated it to our highest priority.
+
+Our team is currently investigating the reported IAM role misconfiguration. We will keep you updated on our progress and provide a detailed plan of action shortly.
+
+In the meantime, please do not hesitate to reach out if you have any further questions.
+
+Sincerely,
+Aetheros Support",issue,issue,0.9223703742027283,high,high,0.9684736728668213
+158,"Hi Aetheros Support,
+
+I'm writing to suggest an improvement to the Cloud Management dashboard. It would be incredibly helpful if we could see a real-time graph of our cloud resource usage directly on the main dashboard. 
+
+Currently, we have to navigate to a separate section for this information. Having it readily available on the main dashboard would significantly improve our monitoring and resource management efficiency.
+
+Thanks,
+John Doe",suggestion,suggestion,0.9936426877975464,medium,low,0.7440768480300903
+159,"Our production API, built by Aetheros, has been down for the past 30 minutes. We are experiencing a complete outage of our order processing system. 
+
+This is a critical issue impacting our business operations and revenue. We need immediate assistance to resolve this.
+
+Please advise on the status and estimated time to resolution.",issue,issue,0.9347308874130249,high,high,0.9758970141410828
+160,"Hi Aetheros Support,
+
+I have a quick question about the API Monitoring dashboard. Is it possible to customize the widgets displayed, and if so, how can I do that?
+
+Thanks,
+John Doe",inquiry,inquiry,0.9812580347061157,low,low,0.8820292353630066
+161,"Hi Aetheros Support,
+
+I'm experiencing some unexpected behavior with the async functionality in Mercury. When I try to chain multiple asynchronous calls, the execution seems to break down, and I'm not getting any errors to debug.
+
+Could you please provide some guidance on how to properly handle complex asynchronous operations in Mercury?
+
+Thanks,
+John Doe",inquiry,issue,0.7776889801025391,medium,low,0.6999741196632385
+162,"Dear John,
+
+We apologize for the delay. Our team is still investigating the issue. We will update you as soon as we have more information. 
+
+Thank you for your patience,
+Aetheros Support Team",inquiry,issue,0.8887380361557007,low,high,0.48326078057289124
+163,"Hi Aetheros Support,
+
+I've been using your API monitoring platform for a few weeks now, and I really like it. However, I have a suggestion for the dashboard. It would be really helpful if we could customize the dashboard widgets to display specific metrics that are important to us. For example, I'd like to be able to see a graph of API latency for specific endpoints over time.
+
+Thanks,
+John Doe",suggestion,suggestion,0.9923787117004395,low,low,0.900999903678894
+164,"Dear John,
+
+Thank you for contacting Aetheros Support. We understand the urgency of this issue and are working to resolve it as quickly as possible. 
+
+To help us diagnose the problem, could you please provide the following information:
+
+*  A list of affected user accounts
+*  The specific API endpoints they are unable to access
+*  Timestamps of when the issue began
+*  Any recent changes you made to your API or IAM configurations
+
+We will keep you updated on our progress. 
+
+Sincerely,
+The Aetheros Support Team",issue,issue,0.904153048992157,high,high,0.9228283762931824
+165,"Hello John,
+
+Thank you for reaching out to us about this issue. To help us investigate further, could you please provide us with the following information?
+
+* Version of Mercury Language you are using
+* Relevant code snippets
+* Steps to reproduce the issue
+
+Once we have this information, we will be able to assist you further.
+
+Best regards,
+Aetheros Support Team",issue,issue,0.7338973879814148,medium,low,0.872639000415802
+166,"Here is the information you requested:
+
+* **Affected instance IDs:** i-0a1b2c3d4e5f6g7h8, i-9i8j7k6l5m4n3o2p1q
+* **Error messages:** ""Service Unavailable"", ""Resource Limit Reached""
+* **Recent changes:** We scaled up our database cluster yesterday.
+
+Please let us know if you require further details. We need to get this resolved ASAP as it's impacting our customers.",inquiry,issue,0.9175000190734863,high,high,0.968903124332428
+167,"Dear Aetheros Support Team,
+
+I am writing to request urgent guidance on integrating your API development and cloud management services with our existing platform. We are facing significant challenges in streamlining our deployment process and achieving the desired scalability.
+
+We are particularly interested in understanding how Aetheros can help us:
+
+* Design and implement high-performance APIs that can handle our increasing user base.
+* Optimize our cloud infrastructure for cost-effectiveness and performance.
+* Implement a robust deployment pipeline that minimizes downtime during updates.
+
+Could you please schedule a consultation with one of your technical experts at your earliest convenience? We are available to discuss our requirements and explore potential solutions.
+
+Thank you for your prompt attention to this matter.
+
+Sincerely,
+John Doe
+",inquiry,inquiry,0.9700031876564026,medium,medium,0.7180448770523071
+168,"Hi Aetheros Support Team,
+
+We are experiencing a critical issue with API response times for the API you developed for us. Since yesterday evening, requests to the API have been extremely slow, causing major disruptions to our application.
+
+We are currently seeing response times of over 60 seconds, which is completely unacceptable for our users. This is severely impacting our business operations.
+
+We need this resolved urgently. Please let us know what steps you are taking to investigate and fix this issue immediately.
+
+Regards,
+John Doe",issue,issue,0.8971887230873108,high,high,0.7576703429222107
+169,"We are experiencing critical issues with our API monitoring system after integrating with the Mercury language. Since the integration, our monitoring dashboards have been displaying inaccurate data and frequently timing out. This is severely impacting our ability to monitor our API performance and identify potential issues.
+
+We have followed the Mercury integration guide meticulously and haven't been able to pinpoint the cause of these errors. We require immediate assistance to resolve this issue as it's impacting our production environment.",issue,issue,0.9133993983268738,high,high,0.9735150933265686
+170,"This is incredibly frustrating, our project is completely at a standstill! We've attached the error logs and a code snippet.  Yes, we've confirmed we are using the latest version of everything. 
+
+We need a solution ASAP, this delay is costing us money!
+
+Kenneth",issue,issue,0.9029821157455444,high,high,0.8258439898490906
+171,"Hi,
+
+Here's the information you requested:
+
+* **Affected Users:**
+    * jane.doe@example.com - Unable to access marketing dashboards
+    * peter.pan@example.com - Unable to modify server configurations
+* **Screenshots:** [Link to screenshot]
+* **Issue First Noticed:** Around 10:00 AM UTC on October 26th.
+
+Let me know if you require anything else.
+
+Thanks,
+John",issue,issue,0.8932352662086487,low,high,0.6375648975372314
+172,"Hi John,
+
+Our team has investigated the issue and identified a bottleneck in our system that was causing the slow response times.  We have addressed the issue and API performance should be back to normal. 
+
+Please let us know if you continue to experience any problems.
+
+Thanks,
+The Aetheros Support Team",issue,issue,0.9254793524742126,medium,medium,0.802923321723938
+173,"Dear John,
+
+Thank you for reaching out to Aetheros Support.
+
+We understand the urgency of the situation and are actively investigating the issues you reported.
+
+Regarding the API Monitoring Dashboard, could you please provide us with the following information to assist with our investigation:
+
+* Approximate time the issue began
+* Any recent changes made to your API or monitoring configuration
+
+For the unresponsive cloud instance, please share the following details:
+
+* Instance ID
+* Any error messages you encountered
+
+We will update you on the status of our investigation within the next 2 hours.
+
+Best regards,
+Aetheros Support Team",issue,issue,0.9224621653556824,medium,high,0.8523168563842773
+174,"Hi John,
+
+Thank you for contacting Aetheros Support. We understand you're experiencing difficulties integrating IAM roles with your Mercury project.
+
+Could you please provide us with the following information so we can assist you better?
+
+* A code snippet showing how you're defining roles and permissions within your Mercury code.
+* The configuration of your IAM roles and how you've assigned users to them.
+* Any error messages you are encountering.
+
+Once we have this information, we'll be able to investigate further and provide a solution.
+
+Best regards,
+The Aetheros Support Team",inquiry,issue,0.5485398769378662,low,low,0.6621520519256592
+175,"Hello John,
+
+Thank you for reaching out to Aetheros Support. You can absolutely manage access to your cloud instances using our IAM service.  
+
+You can create separate roles for 'Development' and 'Production' access. Then, within each role, you can define permissions to allow access to specific instances or groups of instances based on tags or other identifiers.
+
+We have detailed documentation on configuring roles and permissions within our IAM service here: [Link to documentation]
+
+Let us know if you have any other questions.
+
+Best Regards,
+Aetheros Support Team",inquiry,inquiry,0.9753216505050659,low,low,0.8887783288955688
+176,"Dear John,
+
+Thank you for reaching out and bringing this to our attention. We understand the urgency of the situation and are actively investigating the issues with API Monitoring and the related cloud cost spikes.
+
+Our preliminary analysis suggests a possible misconfiguration that might be triggering the false positives. We are currently working to pinpoint the root cause and will provide an update within the next 2-4 hours.
+
+In the meantime, could you please provide us with the following information to assist with our investigation:
+
+*   Specific time the issue started occurring
+*   Screenshots or logs of the false positive alerts from your API Monitoring dashboard
+*   Any recent changes you made to your API or cloud configurations before the issue began
+
+Your cooperation is greatly appreciated as we work towards a swift resolution.
+
+Sincerely,
+Aetheros Support Team",issue,issue,0.9229841828346252,high,high,0.9332302808761597
+177,"Dear John,
+
+Thank you for contacting Aetheros Support. We understand that you are experiencing a critical issue with your cloud instance. We have escalated this issue to our highest priority and our engineers are actively investigating the root cause. 
+
+We will keep you updated on the progress and provide an estimated time to resolution as soon as possible.
+
+Sincerely,
+The Aetheros Support Team",issue,issue,0.9428204298019409,high,high,0.9658081531524658
+178,"Hello,
+
+I'm having trouble setting up specific user roles within the Aetheros IAM service. I want to create a role that only has access to certain APIs, but I can't seem to restrict access at that granular level. 
+
+Could you please advise on how to achieve this?
+
+Thanks,
+John Doe",inquiry,inquiry,0.8125630617141724,medium,low,0.8421198129653931
+179,"We are experiencing issues with IAM role assignment in our production environment.  We recently made changes to our cloud infrastructure through Aetheros Cloud Management and now our application is unable to access the necessary resources. We suspect there may be an issue with the role assignments not properly propagating after the infrastructure update.
+
+This is causing a major disruption to our service.  Could you please investigate this urgently?",issue,issue,0.9273223280906677,medium,high,0.9543142318725586
+180,"Hello Isiah,
+
+Thank you for reaching out. We understand you're facing scaling challenges with your application. To assist you effectively, could you please provide us with more details about your current cloud configuration, including:
+
+* Instance types and sizes
+* Autoscaling policies configured
+* Database specifications
+* Approximate traffic volume during peak hours
+
+Once we have this information, we can investigate further and suggest optimization strategies. 
+
+Best regards,
+The Aetheros Support Team",inquiry,inquiry,0.9743620157241821,medium,low,0.7517475485801697
+181,"My Account ID is: 8574932
+
+Monitor configuration for /v2/users is attached.
+
+Thanks,
+John",issue,issue,0.8537278771400452,high,medium,0.45151767134666443
+182,"We are experiencing a critical issue with the Aetheros IAM service. We recently updated user roles and permissions, but the changes are not being reflected in our application. This is causing major disruptions as users are unable to access the resources they need. We require immediate assistance to resolve this issue.",issue,issue,0.9351692199707031,high,high,0.975996196269989
+183,"Dear John,
+
+Thank you for providing the additional information. We have identified the issue. It appears you are using an incorrect keyword ""END"" in line 42. 
+
+The correct syntax in Mercury Language is to not use an ""END"" keyword for single-line statements. 
+
+Please remove the ""END"" keyword from line 42. Your code should look like this:
+
+```mercury
+40  // Calculate the total amount
+41  let total = price * quantity;
+42  
+43  // Display the total amount
+44  print(""Total: $"", total);
+```
+
+This should resolve the compiler error. Please try compiling your code again with this change.
+
+We apologize for the inconvenience caused. Please let us know if you have any further questions.
+
+Sincerely,
+The Aetheros Support Team",issue,issue,0.8858516812324524,high,high,0.9155351519584656
+184,"Hi,
+
+This is still ongoing. Our service is severely impacted. Have you identified the root cause?
+
+John",issue,issue,0.9235901236534119,high,high,0.8960925340652466
+185,"Hi John,
+
+Thank you for reaching out to us. We understand you're experiencing issues adding users to a group in our IAM service. 
+
+To help us troubleshoot this issue, could you please provide us with the following information?
+
+* The name of the group you're trying to add users to.
+* The usernames of the users you're trying to add.
+* A screenshot of the error message you're receiving.
+
+Once we have this information, we'll be able to assist you further.
+
+Best regards,
+Aetheros Support Team",inquiry,issue,0.8643763065338135,medium,medium,0.6260376572608948
+186,"Hello Aetheros Support,
+
+I'm having trouble setting specific role permissions within a Mercury language script. I've defined roles in the IAM service, but I can't seem to access the correct context within the script to enforce them. 
+
+Is there a specific library or function I need to use from the IAM service within my Mercury code to achieve this? 
+
+Thanks,
+John Doe",issue,inquiry,0.5513226389884949,low,low,0.6906159520149231
+187,"Dear John,
+
+Thank you for reaching out to Aetheros Support.
+
+We understand you're experiencing issues configuring your API gateway. We're happy to help.
+
+To better assist you, could you please provide the following information:
+
+* Your Aetheros account ID
+* The name of the application you're deploying
+* The specific version of the API gateway documentation you're referring to
+
+Once we have this information, we can investigate further and provide a solution.
+
+Best regards,
+Aetheros Support Team",inquiry,issue,0.8215576410293579,medium,medium,0.6395571827888489
+188,"Thank you for contacting Aetheros Support.
+
+We understand you are experiencing issues with user authentication via your API after an IAM role update. We will investigate this issue further.
+
+Could you please provide us with the following information to assist in our investigation:
+- The specific IAM role(s) that were updated
+- The timestamp of the update
+- Any error messages observed during the authentication process
+
+Once we have received this information, we will be able to assist you further.",issue,issue,0.9391061663627625,high,high,0.9621466994285583
+189,"Hi Support Team,
+
+Thanks for the response. I'm using Mercury version 2.5.1. We are configuring the IAM roles directly within our cloud management console, not within the Mercury code itself. We are using the predefined roles provided by Aetheros. We expect the API to automatically enforce these roles.
+
+I haven't included a code snippet as we're not explicitly handling role validation in our code. We were under the impression that this was handled automatically by Aetheros when using your platform.
+
+Could there be a misconfiguration on the cloud management side that is preventing the roles from being properly applied?
+
+Regards,
+John",inquiry,issue,0.8646602034568787,low,medium,0.6594054102897644
+190,"Hi John,
+
+Thank you for letting us know that you were able to resolve the issue. We appreciate your feedback regarding the error message clarity in Mercury. We'll forward your suggestion to our development team for consideration in future releases.
+
+If you have any further questions or encounter any other issues, please don't hesitate to contact us again.
+
+Best regards,
+The Aetheros Support Team",inquiry,suggestion,0.9767221212387085,medium,low,0.8037445545196533
+191,"Hi Aetheros Support,
+
+I'm working on a project using Mercury for API development, and I'm a bit stuck on how it interacts with your Cloud Management service for deployment.
+
+Specifically, I'm wondering about:
+
+* Can I define infrastructure requirements (like server size, region) within my Mercury code?
+* How do I deploy a Mercury API to Aetheros Cloud Management? Is there a specific command or tool?
+*  Are there any best practices or tutorials for this type of deployment?
+
+Thanks in advance for your help!
+
+Sincerely,
+John Doe",inquiry,inquiry,0.9820640087127686,low,low,0.8661084771156311
+192,"Hi John,
+
+Thank you for reaching out to Aetheros Support.
+
+We understand you're experiencing difficulties deploying a Mercury lambda function to your managed cloud environment. To assist you effectively, could you please provide the following information:
+
+* The approximate time and date of the failed deployments.
+* The region where your cloud environment is located.
+* The error message you received, if any.
+* A code snippet of your Mercury lambda function (if possible).
+
+Once we have this information, we can investigate further and provide a solution.
+
+Best regards,
+Aetheros Support Team",issue,issue,0.72724848985672,low,low,0.6292330622673035
+193,"Hi Aetheros Support,
+
+I'm working on a project using Mercury language and I'm a bit stuck on the syntax for asynchronous function calls. The documentation seems to be missing that part. 
+
+Could you please provide some examples or point me to the right resources?
+
+Thanks,
+Isabella Davis",inquiry,inquiry,0.9694820046424866,low,low,0.8779515027999878
+194,"Our production API developed by Aetheros is experiencing severe response timeouts and is effectively down.  We are seeing a huge spike in 504 errors.  This is a critical issue impacting our customers. Please advise ASAP.
+
+--
+John Doe
+Lead Software Engineer",issue,issue,0.9251443147659302,high,high,0.9697268009185791
+195,"Hi John,
+
+Thank you for reaching out. We understand that scaling issues can be frustrating. To help us investigate, could you please provide us with your application ID and the specific time periods when you experienced slowdowns?
+
+Best regards,
+The Aetheros Support Team",issue,inquiry,0.691874623298645,low,low,0.8843040466308594
+196,"Updating to 1.2.15 resolved the issue. Thank you for your help. However, this whole situation was incredibly frustrating. Our production environment was down for two days because of a bug in your software. We rely on your products and need assurance that such critical bugs are minimized in the future.",issue,issue,0.9330840706825256,high,high,0.9757620692253113
+197,"Dear Isiah,
+
+Thank you for reaching out to Aetheros Support.
+
+We understand you are looking for information on concurrency control in Mercury.  We are currently gathering resources to best answer your question.
+
+We will get back to you within 24 hours.
+
+Sincerely,
+The Aetheros Support Team",inquiry,inquiry,0.9787431359291077,low,low,0.785266637802124
+198,"Hi Aetheros Support,
+
+I'm having some trouble setting up rate limiting for an API I've deployed using Aetheros Cloud Management. 
+
+Specifically, I can't seem to get the rate limiting rules to apply correctly and I'm seeing inconsistent behavior. Could you provide some guidance on how to properly configure rate limiting for my API?
+
+Thanks,
+John Doe",inquiry,inquiry,0.9218913912773132,low,low,0.8814966678619385
+199,"Hi,
+
+The issue seems to be mainly affecting the /users and /orders endpoints. It's been happening intermittently throughout the day, but it's worse during peak hours (around 10am-12pm and 6pm-8pm EST). 
+
+We're not seeing any specific error messages, just very slow loading times. Sometimes the requests time out completely.
+
+Please let me know if you need any further information.
+
+Thanks,
+John",issue,issue,0.8809270858764648,medium,medium,0.7003727555274963
+200,"Here is the information you requested:
+
+* Approximate number of users affected: 20% of our user base (approximately 500 users)
+* Timestamps of when the issue occurred: The issue has been occurring intermittently throughout the day, with the first instance reported around 9:00 AM UTC.
+* Any error messages received:  Users are simply being logged out and see a generic 'access denied' message.
+* Steps you have already taken to troubleshoot the problem: We have checked our network connectivity, verified user credentials, and reviewed recent changes to our IAM configuration, but haven't found any obvious issues.",issue,issue,0.935144305229187,high,high,0.9651901125907898
+201,We have identified the issue and are working on implementing a fix. We expect services to be restored within the next hour. We apologize for the inconvenience this is causing.,issue,issue,0.9350776672363281,high,high,0.9769319891929626
+202,"Dear John,
+
+We have identified the issue. You are attempting to assign a role while your account only has permissions to manage users.  
+
+To resolve this, please contact your account administrator to request the necessary permissions to manage roles within IAM.
+
+Let us know if you have any further questions.
+
+Sincerely,
+Aetheros Support Team",issue,issue,0.8490681052207947,high,high,0.8596467971801758
+203,"Hi Aetheros Support,
+
+I'm encountering an issue with asynchronous function calls in Mercury. The async keyword doesn't seem to be working as expected, and my code is executing sequentially instead of concurrently. 
+
+Could you please advise on how to properly implement asynchronous calls in Mercury? 
+
+Thanks,
+John Doe",issue,issue,0.879058301448822,medium,medium,0.5719388127326965
+204,"Dear John,
+
+Thank you for contacting Aetheros Support. We understand that you are experiencing issues with IAM roles and Mercury code compilation.
+
+To help us diagnose the problem more effectively, could you please provide the following information:
+
+* The specific error message that your developers are encountering.
+* The version of the Mercury language you are currently using.
+* The name of the cloud provider and region where your resources are hosted.
+
+Once we have this information, we will be able to assist you further.
+
+Sincerely,
+Aetheros Support",issue,issue,0.8722618222236633,medium,high,0.6781920790672302
+205,"We are experiencing a critical issue with Aetheros Cloud Management. Our production deployment is failing, and we are unable to identify the root cause. The error messages are not helpful. 
+
+We have tried restarting the affected services and checking our configurations, but nothing seems to work. This is causing a major outage for our application, and we need urgent assistance. 
+
+Please let us know what information you need to help us resolve this issue as quickly as possible.",issue,issue,0.939762532711029,high,high,0.9728851914405823
+206,"We are experiencing a critical issue with Aetheros IAM service. We are unable to assign specific roles to users within our organization, causing disruptions to our workflows. 
+
+Specifically, attempts to assign the ""Developer"" role are met with an error message stating ""Insufficient Privileges.""  We have confirmed that the user attempting the assignment has the necessary permissions according to your documentation.
+
+This is a high-priority issue as it's preventing our developers from accessing essential resources. We require immediate assistance to resolve this.",issue,issue,0.9196549654006958,high,high,0.9734365344047546
+207,"Hello John,
+
+Thank you for reaching out to Aetheros Support.
+
+To grant read-only access to specific cloud resources, you can create a custom role and attach a policy that allows the 'List' and 'Get' actions on the desired resources. You can then assign this role to the specific team members.
+
+For detailed steps and examples, please refer to our documentation on IAM Roles and Policies: [Link to documentation]
+
+If you have any further questions, please don't hesitate to ask.
+
+Best regards,
+Aetheros Support Team",inquiry,inquiry,0.9760808944702148,low,low,0.8929840922355652
+208,"Dear John,
+
+Thank you for contacting Aetheros Support.
+
+We understand that you are experiencing a critical issue with your production environment. Our team is currently investigating the issue and will provide an update as soon as possible. 
+
+In the meantime, could you please provide us with your Aetheros account ID and the approximate time the issue began?
+
+Best regards,
+Aetheros Support Team",issue,issue,0.9283011555671692,high,high,0.9150804281234741
+209,"Dear John,
+
+Thank you for reaching out to us. We understand that the slow API response time is impacting your application and we apologize for the inconvenience.
+
+We are currently investigating the issue. To help us diagnose the problem more effectively, could you please provide us with the following information:
+
+* Your Aetheros account ID
+* The approximate time you first noticed the issue
+* Any error messages you are encountering
+* A brief description of the API call you are making
+
+We will keep you updated on the progress of our investigation.
+
+Sincerely,
+Aetheros Support Team",inquiry,issue,0.9242138862609863,medium,medium,0.8006532788276672
+210,"Dear John,
+
+Thank you for providing the additional information. Our team has investigated the issue and identified a misconfiguration in the IAM service policy attached to the affected API roles.
+
+We have corrected this misconfiguration, and users should now be able to access the resources with their assigned roles and permissions.
+
+Please confirm if the issue is resolved on your end. We apologize for any inconvenience this may have caused.
+
+Best regards,
+Aetheros Support Team",issue,issue,0.9287257194519043,medium,high,0.9280280470848083
+211,"Hello Aetheros Support Team,
+
+My name is John Doe, and I represent [Fake company name], an e-commerce company looking to revamp our platform. We are highly interested in your API development services, specifically for creating custom APIs for our inventory management, order processing, and customer data.
+
+Could you please provide more information about:
+
+* Your experience in developing e-commerce APIs.
+* The technologies and frameworks you utilize for API development.
+* Your estimated timeline for a project of this scale.
+* Your pricing structure for API development services.
+
+We are eager to learn more about how Aetheros can assist us in achieving our goals. Thank you for your time and consideration.
+
+Sincerely,
+John Doe",inquiry,inquiry,0.9776711463928223,medium,low,0.5814583897590637
+212,"Hi Aetheros Support,
+
+We're facing critical issues with our recent cloud deployment. We're getting consistent ""504 Gateway Timeout"" errors from our main API gateway.  This is completely blocking our production traffic.
+
+We're using your Cloud Management platform for deployment and scaling. We suspect an issue with the load balancer configuration or possibly an issue with the API code itself, which we developed using your API development services.
+
+We need this resolved urgently. Please advise on the next steps and estimated resolution time.
+
+Regards,
+John Doe",issue,issue,0.9151991009712219,high,medium,0.5397837162017822
+213,"Hi Isabella,
+
+Thank you for contacting Aetheros Support. We understand you are unable to access your API dashboard and this is causing disruption to your work. 
+
+We will investigate this issue and get back to you as soon as possible.
+
+Best regards,
+Aetheros Support Team",issue,issue,0.9260358810424805,high,medium,0.7225831151008606
+214,"Hi John,
+
+Thank you for reaching out. We apologize for the delay you're experiencing on your API Monitoring dashboard.
+
+We've identified a temporary issue affecting a small number of users. Our engineers are actively working on a resolution. 
+
+We'll keep you updated on the progress. In the meantime, please don't hesitate to contact us if you have any further questions.
+
+Best regards,
+Aetheros Support",issue,issue,0.8977510929107666,medium,low,0.4925425350666046
+215,"Dear John,
+
+Thank you for reaching out. We understand the urgency of the situation. Our team is currently investigating the issue with your AWS environment. We will keep you updated on the progress.
+
+In the meantime, could you please provide us with the following information to assist with our investigation:
+
+* Timeframe when the issue started
+* Any specific error messages you are seeing
+
+Best regards,
+Aetheros Support Team",issue,issue,0.915816605091095,medium,high,0.6884971261024475
+216,"We are experiencing a critical issue with the Mercury Language compiler. Our entire development team is at a standstill. 
+
+The error message we're receiving is: ""Compiler Internal Error: Unexpected token 'END' on line 42."" 
+
+We have reviewed the code multiple times and cannot identify any syntax errors. This error appeared suddenly, and we haven't made any recent changes to our Mercury installation or the project configuration. 
+
+We are on a tight deadline, and this issue is severely impacting our project timeline. Please advise on a solution as soon as possible.",issue,issue,0.9454845190048218,high,high,0.9747925996780396
+217,"Hi Aetheros Support,
+
+My application, 'Foodie Reviews', deployed on your cloud platform, has been experiencing intermittent outages and slowdowns since this morning. We're seeing a huge spike in traffic that we anticipated, but your auto-scaling doesn't seem to be handling it properly.  
+
+Could you please look into this immediately? Our users are heavily impacted. We need this fixed ASAP.
+
+Thanks,
+John Doe
+Foodie Reviews",issue,issue,0.8729981780052185,medium,medium,0.81221604347229
+218,"Hi Support Team,
+
+Thanks for getting back to us.
+
+Here's the information you requested:
+
+* Mercury Language version: 1.2.3
+* Operating System: Ubuntu 20.04
+* Environment: Python 3.8.10
+
+We are encountering ""Runtime Error: Unexpected Token"" consistently. This error message lacks specifics and makes it difficult to pinpoint the problem.
+
+We have attached the relevant code snippets and log files for your reference.
+
+Please advise on how to proceed.
+
+Regards,
+John Doe",inquiry,issue,0.9136029481887817,high,medium,0.6941047310829163
+219,"Hello Aetheros Support Team,
+
+We are facing a critical issue with our API integration that's impacting our production environment. We're using the Mercury language for our API development, and we're encountering significant data discrepancies.
+
+Specifically, the data retrieved via our Mercury API calls is inconsistent with what's reflected in our primary database. This is causing major issues with data integrity and application functionality.
+
+We need immediate assistance in resolving this issue. Please provide urgent support to:
+
+1. Identify the root cause of the data discrepancies between our API and database.
+2. Provide a solution to rectify the existing data inconsistencies.
+3. Offer guidance on preventing such issues in the future.
+
+We are available for a call to discuss this further at your earliest convenience.
+
+Sincerely,
+John Doe",issue,issue,0.8953031301498413,high,high,0.9278964400291443
+220,"Hi Aetheros Support,
+
+Here's the information you requested:
+
+* **Error Message:** ""Authorization Error: User not authorized to access resource 'arn:aetheros:api:us-west-2:123456789012:function:PaymentProcessing' with action 'mercury:Invoke'.""
+* **Mercury Version:** 1.2.5
+* **Cloud Provider & Region:** AWS us-west-2
+
+Let me know if you require any further details. 
+
+Thanks,
+John",issue,issue,0.6963858008384705,medium,medium,0.8263717889785767
+221,"Thanks for the update. User logins are working again. We're eager to get the API monitoring back online, as it's crucial for our operations. Please keep us informed.",issue,issue,0.8568959832191467,high,high,0.9712808728218079
+222,"Hello John,
+
+We're glad to hear that you were able to resolve the deployment issue. Thank you for updating us.  If you encounter any further issues or have any other questions, feel free to contact us again.
+
+Best regards,
+Aetheros Support",issue,issue,0.7792256474494934,medium,low,0.7819135785102844
+223,"Hi John,
+
+Thank you for contacting Aetheros support. We understand you are experiencing latency issues with your API. We've reviewed your monitoring data and noticed unusual traffic patterns during peak hours. Can you provide more details about your API usage during these times? This will help us pinpoint the root cause.
+
+Best Regards,
+Aetheros Support",issue,issue,0.9054710268974304,medium,low,0.7937111854553223
+224,"Dear Kenneth,
+
+Thank you for reaching out to Aetheros Support. We understand the urgency of this issue and are actively investigating the cause of the ""Permission Denied"" error on your API dashboard. 
+
+We will keep you updated on the progress and provide a solution as soon as possible.
+
+Best regards,
+Aetheros Support Team",issue,issue,0.9373525381088257,high,high,0.7050164341926575
+225,"Our team is attempting to deploy a critical update to our production environment, but we are encountering a persistent issue related to an IAM role and a security group managed through Aetheros Cloud. 
+
+The deployment process is failing because the IAM role assigned to our application instances does not have the necessary permissions to access resources within the designated security group. 
+
+We have verified that the security group is configured correctly and the necessary ingress rules are in place. However, the IAM role still does not seem to have the required permissions to access resources within the security group. 
+
+This is a high-priority issue as it is preventing us from deploying essential updates to our production environment. We require immediate assistance to resolve this problem and get our deployment back on track.
+
+Please let us know what steps need to be taken to resolve this issue as soon as possible.",inquiry,issue,0.9441322088241577,high,high,0.9635155200958252

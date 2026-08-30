@@ -4,13 +4,16 @@
 # Python
 __pycache__/
 *.pyc
-.myenv/
-myenv/
+.venv/
+venv/
 *.egg-info/
 dist/
 build/
 
 # Generated outputs
+poc_outputs/bert_cache/
+poc_outputs/bert_extraction_cache/
 bert_train_tmp/
+bert_extraction_train_tmp/
 models/
 results/

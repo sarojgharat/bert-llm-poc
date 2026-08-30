@@ -1,0 +1,43 @@
+{
+  "bert": {
+    "model_name": "distilbert-base-uncased",
+    "fit_seconds": 0.0,
+    "n": 226,
+    "exact_match_ratio": 0.655,
+    "micro_f1": 0.845,
+    "macro_f1": 0.838,
+    "hamming_loss": 0.091,
+    "per_label_f1": {
+      "API Development": 0.661,
+      "API Monitoring": 0.835,
+      "Cloud Management": 0.855,
+      "IAM Service": 0.936,
+      "Mercury Language": 0.905
+    },
+    "avg_latency_ms_per_doc": 41.868,
+    "throughput_docs_per_sec": 23.9
+  },
+  "llm": {
+    "model": "gemini-3.5-flash",
+    "n_attempted": 226,
+    "n_extracted": 226,
+    "n_valid_parses": 226,
+    "n_errors": 0,
+    "exact_match_ratio": 0.412,
+    "micro_f1": 0.652,
+    "macro_f1": 0.617,
+    "hamming_loss": 0.164,
+    "per_label_f1": {
+      "API Development": 0.268,
+      "API Monitoring": 0.745,
+      "Cloud Management": 0.4,
+      "IAM Service": 0.809,
+      "Mercury Language": 0.862
+    },
+    "avg_latency_ms_per_email": 2007.2,
+    "throughput_emails_per_sec_sequential": 0.5,
+    "avg_input_tokens_per_email": 225.2,
+    "avg_output_tokens_per_email": 15.6,
+    "measured_cost_usd_per_1000_emails": 0.4784
+  }
+}

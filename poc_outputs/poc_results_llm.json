@@ -1,0 +1,154 @@
+{
+  "dataset_profile": {
+    "n_emails": 2259,
+    "n_threads": 671,
+    "avg_messages_per_thread": 3.37,
+    "date_range": [
+      "2023-08-12 10:15:32+00:00",
+      "2023-12-20 14:57:22+00:00"
+    ],
+    "avg_message_chars": 416.5,
+    "avg_message_tokens_est": 104.1,
+    "intent_distribution": {
+      "issue": 1444,
+      "inquiry": 608,
+      "suggestion": 205,
+      "other matter": 2
+    },
+    "criticality_distribution": {
+      "high": 934,
+      "medium": 666,
+      "low": 659
+    },
+    "status_distribution": {
+      "completed": 1329,
+      "ongoing": 930
+    },
+    "reply_latency_hours": {
+      "n": 1588,
+      "mean": 16.6,
+      "median": 5.93,
+      "p95": 53.72
+    }
+  },
+  "bert": {
+    "model_name": "distilbert-base-uncased",
+    "fit_seconds": {
+      "intent": 0.0,
+      "criticality": 0.0
+    },
+    "intent_identification": {
+      "n_intent_identified": 226,
+      "task": "intent_identification",
+      "n": 226,
+      "accuracy": 0.827,
+      "macro_f1": 0.822,
+      "weighted_f1": 0.815,
+      "per_class_f1": {
+        "inquiry": 0.614,
+        "issue": 0.877,
+        "suggestion": 0.976
+      },
+      "avg_latency_ms_per_doc": 40.245,
+      "throughput_docs_per_sec": 24.8
+    },
+    "criticality_classification": {
+      "n_criticality_classified": 226,
+      "task": "criticality_classification",
+      "n": 226,
+      "accuracy": 0.743,
+      "macro_f1": 0.705,
+      "weighted_f1": 0.739,
+      "per_class_f1": {
+        "high": 0.883,
+        "low": 0.694,
+        "medium": 0.539
+      },
+      "avg_latency_ms_per_doc": 42.863,
+      "throughput_docs_per_sec": 23.3
+    },
+    "confidence_escalation_curve": {
+      "intent": [
+        {
+          "confidence_threshold": 0.0,
+          "pct_escalated_to_llm": 0.0,
+          "macro_f1_on_retained": 0.822
+        },
+        {
+          "confidence_threshold": 0.5,
+          "pct_escalated_to_llm": 0.0,
+          "macro_f1_on_retained": 0.822
+        },
+        {
+          "confidence_threshold": 0.6,
+          "pct_escalated_to_llm": 1.8,
+          "macro_f1_on_retained": 0.826
+        },
+        {
+          "confidence_threshold": 0.7,
+          "pct_escalated_to_llm": 5.8,
+          "macro_f1_on_retained": 0.826
+        },
+        {
+          "confidence_threshold": 0.8,
+          "pct_escalated_to_llm": 11.9,
+          "macro_f1_on_retained": 0.841
+        },
+        {
+          "confidence_threshold": 0.9,
+          "pct_escalated_to_llm": 34.5,
+          "macro_f1_on_retained": 0.881
+        }
+      ],
+      "criticality": [
+        {
+          "confidence_threshold": 0.0,
+          "pct_escalated_to_llm": 0.0,
+          "macro_f1_on_retained": 0.705
+        },
+        {
+          "confidence_threshold": 0.5,
+          "pct_escalated_to_llm": 5.3,
+          "macro_f1_on_retained": 0.711
+        },
+        {
+          "confidence_threshold": 0.6,
+          "pct_escalated_to_llm": 13.3,
+          "macro_f1_on_retained": 0.722
+        },
+        {
+          "confidence_threshold": 0.7,
+          "pct_escalated_to_llm": 26.5,
+          "macro_f1_on_retained": 0.77
+        },
+        {
+          "confidence_threshold": 0.8,
+          "pct_escalated_to_llm": 40.3,
+          "macro_f1_on_retained": 0.84
+        },
+        {
+          "confidence_threshold": 0.9,
+          "pct_escalated_to_llm": 64.2,
+          "macro_f1_on_retained": 0.658
+        }
+      ]
+    }
+  },
+  "llm": {
+    "model": "gemini-3.5-flash",
+    "n_attempted": 226,
+    "n_intent_identified": 226,
+    "n_criticality_classified": 226,
+    "n_valid_parses": 226,
+    "n_errors": 0,
+    "intent_macro_f1": 0.767,
+    "intent_accuracy": 0.805,
+    "criticality_macro_f1": 0.605,
+    "criticality_accuracy": 0.646,
+    "avg_latency_ms_per_email": 2926.7,
+    "throughput_emails_per_sec_sequential": 0.34,
+    "avg_input_tokens_per_email": 308.7,
+    "avg_output_tokens_per_email": 20.1,
+    "measured_cost_usd_per_1000_emails": 0.6443
+  }
+}

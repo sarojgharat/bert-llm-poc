@@ -13,7 +13,7 @@ import time
 import pandas as pd
 from sklearn.metrics import f1_score, accuracy_score
 
-from . import config
+from .. import config
 
 
 LLM_PROMPT_TEMPLATE = """You are classifying a customer support email for a B2B software company.

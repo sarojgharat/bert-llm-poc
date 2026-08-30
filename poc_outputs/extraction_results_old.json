@@ -1,0 +1,37 @@
+{
+  "bert": {
+    "model_name": "distilbert-base-uncased",
+    "fit_seconds": 2224.21,
+    "n": 226,
+    "exact_match_ratio": 0.655,
+    "micro_f1": 0.845,
+    "macro_f1": 0.838,
+    "hamming_loss": 0.091,
+    "per_label_f1": {
+      "API Development": 0.661,
+      "API Monitoring": 0.835,
+      "Cloud Management": 0.855,
+      "IAM Service": 0.936,
+      "Mercury Language": 0.905
+    },
+    "avg_latency_ms_per_doc": 77.487,
+    "throughput_docs_per_sec": 12.9
+  },
+  "llm": {
+    "model": "gemma-4-31b-it",
+    "n_attempted": 226,
+    "n_extracted": 0,
+    "n_valid_parses": 0,
+    "n_errors": 226,
+    "exact_match_ratio": null,
+    "micro_f1": null,
+    "macro_f1": null,
+    "hamming_loss": null,
+    "per_label_f1": {},
+    "avg_latency_ms_per_email": 3165.6,
+    "throughput_emails_per_sec_sequential": 0.32,
+    "avg_input_tokens_per_email": 0.0,
+    "avg_output_tokens_per_email": 0.0,
+    "measured_cost_usd_per_1000_emails": null
+  }
+}
